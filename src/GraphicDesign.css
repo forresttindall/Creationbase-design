@@ -1,6 +1,6 @@
 .gd-grid {
   width: 100%;
-  columns: 3 320px;
+  columns: 2 320px;
   column-gap: 16px;
 }
 
@@ -26,6 +26,12 @@
   padding: 0 12px 12px 12px;
   font-size: 12px;
   color: #9c9c9c;
+}
+
+.gd-desc {
+  font-size: 14px;
+  color: #9c9c9c;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 1200px) {
