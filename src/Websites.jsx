@@ -19,7 +19,7 @@ export default function Websites() {
 
                  <section className='project card'>
             <div className="featured-image">
-              <img src="/images/amore.png" alt="Amore" />
+              <img src="/images/amore mockup.png" alt="Amore" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Amore</p>
             <p className="mono-text"><span className="bold">Description:</span> Boise Restaurant</p>
