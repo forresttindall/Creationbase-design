@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav-left {
@@ -76,4 +77,110 @@
 
 .nav-link svg {
   display: block;
+}
+.menu-toggle {
+  display: none;
+  width: 28px;
+  height: 28px;
+  color: inherit;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: transparent;
+  border: none;
+}
+
+.menu-toggle .bar {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 2px;
+  background: #c7c7c7;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.menu-toggle .bar-top { top: 10px; }
+.menu-toggle .bar-bottom { top: 16px; }
+
+.menu-toggle.open .bar-top {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.menu-toggle.open .bar-bottom {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.96);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 80px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.mobile-menu .nav-link {
+  font-size: 24px;
+  text-align: center;
+}
+
+.mobile-menu .nav-link::after {
+  left: 0;
+  width: 100%;
+  margin-left: 0;
+}
+
+.menu-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  z-index: 100;
+  background: transparent;
+  border: none;
+}
+
+.menu-close .bar {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 2px;
+  background: #c7c7c7;
+}
+
+.menu-close .bar-top { top: 14px; transform: rotate(45deg); }
+.menu-close .bar-bottom { top: 14px; transform: rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav-right {
+    display: none;
+  }
+  .menu-toggle {
+    display: inline-flex;
+  }
+  .logo {
+    height: 24px;
+  }
 }

@@ -44,6 +44,7 @@ export default function Homepage() {
           <div className="hero-right">
             <img src="/images/hero-photo.jpg" alt="Hero" className="hero-img" />
           </div>
+          <a href="/contact" className="cta-btn cta-btn-mobile">Contact</a>
         </section>
 
         <section className="grid">

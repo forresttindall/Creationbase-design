@@ -1,6 +1,6 @@
 .gd-grid {
   width: 100%;
-  columns: 2 320px;
+  columns: 3 320px;
   column-gap: 16px;
 }
 
@@ -41,10 +41,4 @@
   font-weight: 700;
   margin-bottom: 40px;
   margin-top: 20px;
-}
-
-.gd-desc {
-  font-size: 14px;
-  color: #9c9c9c;
-  margin-bottom: 24px;
 }

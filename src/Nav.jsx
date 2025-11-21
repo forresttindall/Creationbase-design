@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { InstagramLogo } from '@phosphor-icons/react'
 import './Nav.css'
 
 export default function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <nav className="nav">
       <div className="nav-container">
@@ -18,6 +19,27 @@ export default function Nav() {
           <a href="/photography" className="nav-link"><span className="nav-link-text">Photography</span></a>
           <a href="/contact" className="nav-link"><span className="nav-link-text">Contact</span></a>
           <a href="https://www.instagram.com/forrest.tindall" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
+        </div>
+        <button
+          type="button"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          className={`menu-toggle ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(o => !o)}
+        >
+          <span className="bar bar-top" />
+          <span className="bar bar-bottom" />
+        </button>
+      </div>
+      <div id="mobile-menu" className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-container">
+          <a href="/biography" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Biography</span></a>
+          <a href="/graphicdesign" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Graphic Design</span></a>
+          <a href="/websites" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Websites</span></a>
+          <a href="/photography" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Photography</span></a>
+          <a href="/contact" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Contact</span></a>
+          <a href="https://www.instagram.com/forrest.tindall" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
         </div>
       </div>
     </nav>

@@ -130,9 +130,17 @@
 @media (max-width: 768px) {
   .bio-hero-images {
     grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .bio-hero-images img {
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
   .bio-title {
     font-size: 28px;
+  }
+  .project {
+    padding: 10px 0;
   }
 }
 

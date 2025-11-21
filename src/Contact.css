@@ -27,6 +27,12 @@
   padding: 20px;
 }
 
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 10px 0;
+  }
+}
+
 .contact-form {
   display: grid;
   grid-template-columns: 1fr;

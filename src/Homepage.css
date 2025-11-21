@@ -199,6 +199,8 @@
   color: #9c9c9c;
 }
 
+.cta-btn-mobile { display: none; }
+
 .cta-section {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -226,5 +228,48 @@
   .homepage-container {
     max-width: 1000px;
     padding: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    min-height: auto;
+    margin-bottom: 60px;
+  }
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  .name {
+    font-size: 36px;
+  }
+  .sub {
+    font-size: 18px;
+  }
+  .hero-left .cta-btn { display: none; }
+  .cta-btn-mobile { display: inline-block; align-self: center; margin-top: 16px; }
+  .hero-right {
+    width: 100%;
+  }
+  .hero-img {
+    max-width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 200px;
+  }
+  .card {
+    margin-top: 16px;
   }
 }
