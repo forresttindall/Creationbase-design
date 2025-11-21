@@ -56,7 +56,7 @@ export default function Websites() {
 
           <section className='project card'>
             <div className="featured-image">
-              <img src="/images/arrowleaf.jpg" alt="Arrowleaf" />
+              <img src="/images/arrowleaf.png" alt="Arrowleaf" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Arrowleaf</p>
             <p className="mono-text"><span className="bold">Description:</span>Restaurant website</p>

@@ -88,7 +88,7 @@ export default function Homepage() {
         </a>
 
         <a href="/websites" className="feature card feature-link">
-          <img src="/images/arrowleaf.jpg" alt="Web Design and Development" className="feature-img" />
+          <img src="/images/arrowleaf.png" alt="Web Design and Development" className="feature-img" />
           <div className="label">Web Design & Development</div>
           <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>
         </a>
