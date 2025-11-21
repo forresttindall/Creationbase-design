@@ -18,7 +18,7 @@
     "@vitejs/plugin-react": "^4.4.1"
   },
   "engines": {
-    "node": ">=20.0.0",
+    "node": "20.x",
     "bun": ">=1.1.0"
   }
 }
