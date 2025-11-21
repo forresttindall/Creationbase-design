@@ -20,7 +20,7 @@ export default function Biography() {
               <img src="/images/IMG_2273-2.jpg" alt="Biography photo" />
               
             </div>
-            <p className="bio-text">J. F. Tindall is a Fullstack Creative from Boise, Idaho, raised in the wide landscapes of the American West. His work spans photography, design, art, and web development, blending technical precision with visual storytelling.</p>
+            <p className="bio-text">Forrest Tindall is a Fullstack Creative from Boise, Idaho, raised in the wide landscapes of the American West. His work spans photography, design, art, and web development, blending technical precision with visual storytelling.</p>
             <p className="bio-text">He began making art early, first through drawing and writing, then discovering film photography at thirteen.</p>
             <p className="bio-text">In 2012, he began designing logos, and he launched Tindall Knives, beginning an over decade-long career as a bladesmith.</p>
             <p className="bio-text">Around the same time, he started a parallel path in photography, focusing on outdoor and product photography for the knife and tool industry. His photography has been featured in multiple publications, including Popular Mechanics Magazine.</p>
