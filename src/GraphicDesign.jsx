@@ -47,7 +47,7 @@ export default function GraphicDesign() {
 
                 <section className='project card'>
             <div className="featured-image">
-              <img src="/images/parallax.png" alt="Parallax Zine" />
+              <img src="/images/parallax shirt.jpg" alt="Parallax Zine" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Parallax Zine (Film Photography Zine)</p>
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>
