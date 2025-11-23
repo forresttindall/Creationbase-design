@@ -89,4 +89,26 @@ main {
 
 
 /* Anchor glow removed and styles scoped to nav links in Nav.css */
+h1, h2 {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h1, h2 {
+
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: Geist mono, monospace;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.label {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
 
