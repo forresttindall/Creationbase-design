@@ -55,15 +55,6 @@ export default function Homepage() {
         </section>
 
 
-<div>
-        <a href="/websites" className="feature card feature-link">
-          <img src="/images/arrowleaf.png" alt="Web Design and Development" className="feature-img" />
-          <div className="label">Web Design & Development</div>
-          <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>
-        </a>
-</div>
-
-
         <section className="grid">
           <a href="/graphicdesign" className="card-link">
             <div className="card">
@@ -87,6 +78,19 @@ export default function Homepage() {
             </div>
           </a>
         </section>
+
+        
+
+<div>
+        <a href="/websites" className="feature card feature-link">
+          <img src="/images/fastburger.png" alt="Web Design and Development" className="feature-img" />
+          <div className="label">Web Design & Development</div>
+          <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>
+        </a>
+</div>
+
+
+
 
 <div>
         <a href="/photography" className="feature card feature-link">
