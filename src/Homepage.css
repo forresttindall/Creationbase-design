@@ -204,7 +204,10 @@
 }
 
 .cta-text {
-  font-size: 22px;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 32px;
   color: #c7c7c7;
   margin-bottom: 12px;
 }
