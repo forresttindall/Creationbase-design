@@ -28,7 +28,7 @@ export default function GraphicDesign() {
             <div className="featured-image">
               <img src="/images/lrk.jpg" alt="Featured artwork" />
             </div>
-            <p className="mono-text"><span className="bold">Brand:</span> Tindall Knives</p>
+            <p className="mono-text"><span className="bold">Brand:</span> Lost River Knives</p>
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>
           </section>
 
@@ -38,7 +38,7 @@ export default function GraphicDesign() {
 
           <section className='project card'>
             <div className="featured-image">
-              <img src="/images/Open-Netizen.jpg" alt="Featured artwork" />
+              <img src="/images/OPEN NETIZEN.jpg" alt="Featured artwork" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Open Netizen (non-profit organization)</p>
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>
@@ -52,17 +52,10 @@ export default function GraphicDesign() {
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>
           </section>
 
-          <section className='project card'>
-            <div className="featured-image">
-              <img src="/images/logo.jpg" alt="Featured artwork" />
-            </div>
-            <p className="mono-text"><span className="bold">Brand:</span> Lavendair (software)</p>
-            <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>
-          </section>
 
           <section className='project card'>
             <div className="featured-image">
-              <img src="/images/paradoxlabsgreensmaller.jpg" alt="Featured artwork" />
+              <img src="/images/paradoxlabs.jpg" alt="Featured artwork" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Paradox Labs (Tech)</p>
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>

@@ -14,10 +14,11 @@ export default function Nav() {
         </div>
         <div className="nav-right">
            <a href="/websites" className="nav-link"><span className="nav-link-text">Websites</span></a>
-          <a href="/biography" className="nav-link"><span className="nav-link-text">Biography</span></a>
+          
           <a href="/graphicdesign" className="nav-link"><span className="nav-link-text">Graphic Design</span></a>
          
           <a href="/photography" className="nav-link"><span className="nav-link-text">Photography</span></a>
+          <a href="/biography" className="nav-link"><span className="nav-link-text">Biography</span></a>
           <a href="/contact" className="nav-link"><span className="nav-link-text">Contact</span></a>
           <a href="https://www.instagram.com/forrest.tindall" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
         </div>
