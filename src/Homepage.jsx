@@ -48,9 +48,9 @@ export default function Homepage() {
         <section className="hero">
          
             <h1 className="name">Forrest Tindall</h1>
-           
+           <div className="sub">{typed}<span className="caret" /></div>
             <img src="/images/hero-photo.jpg" alt="Hero" className="hero-img" style={{ transform: `translateY(${parallax}px)` }} />
-          <div className="sub">{typed}<span className="caret" /></div>
+          
       
         </section>
 
@@ -79,7 +79,7 @@ export default function Homepage() {
           </a>
         </section>
 
-        
+
 
 <div>
         <a href="/websites" className="feature card feature-link">
