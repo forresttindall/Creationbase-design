@@ -67,21 +67,21 @@ export default function Homepage() {
         <section className="grid">
           <a href="/graphicdesign" className="card-link">
             <div className="card">
-              <img src="/images/paradoxlabsgreensmaller.jpg" alt="Logo Design" className="card-img" />
+              <img src="/images/paradoxlabs.jpg" alt="Logo Design" className="card-img" />
               <div className="label">Logo Design</div>
               <p className="desc">Distinctive marks and identity systems that stand out and scale across mediums.</p>
             </div>
           </a>
           <a href="/graphicdesign" className="card-link">
             <div className="card">
-              <img src="/images/IMG_3103.PNG" alt="Graphic Design" className="card-img" />
+              <img src="/images/parallax shirt 3.jpg" alt="Graphic Design" className="card-img" />
               <div className="label">Graphic Design</div>
               <p className="desc">Posters, layouts, and digital assets crafted for clarity, impact, and polish.</p>
             </div>
           </a>
           <a href="/graphicdesign" className="card-link">
             <div className="card">
-              <img src="/images/IMG_3105.PNG" alt="Branding" className="card-img" />
+              <img src="/images/creationbasemockup.jpg" alt="Branding" className="card-img" />
               <div className="label">Branding</div>
               <p className="desc">Strategy, tone, and a cohesive visual system that tells a consistent story.</p>
             </div>
