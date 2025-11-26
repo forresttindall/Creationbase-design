@@ -8,8 +8,9 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav-container">
         <div className="nav-left">
-          <a href="/" aria-label="Home">
-            <img src="/images/logo.png" alt="Logo" className="logo" />
+          <a href="/" aria-label="Home" className="brand-link">
+            <img src="/images/dot-triangle.png" alt="Creationbase Logo" className="logo" />
+            <span className="brand">CREATIONBASE</span>
           </a>
         </div>
         <div className="nav-right">
@@ -17,10 +18,9 @@ export default function Nav() {
           
           <a href="/graphicdesign" className="nav-link"><span className="nav-link-text">Graphic Design</span></a>
          
-          <a href="/photography" className="nav-link"><span className="nav-link-text">Photography</span></a>
-          <a href="/biography" className="nav-link"><span className="nav-link-text">Biography</span></a>
+          <a href="/about" className="nav-link"><span className="nav-link-text">About</span></a>
           <a href="/contact" className="nav-link"><span className="nav-link-text">Contact</span></a>
-          <a href="https://www.instagram.com/forrest.tindall" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
+          <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
         </div>
         <button
           type="button"
@@ -38,10 +38,9 @@ export default function Nav() {
         <div className="mobile-menu-container">
           <a href="/websites" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Websites</span></a>
           <a href="/graphicdesign" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Graphic Design</span></a>
-          <a href="/photography" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Photography</span></a>
-          <a href="/biography" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Biography</span></a>
+          <a href="/about" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">About</span></a>
           <a href="/contact" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Contact</span></a>
-          <a href="https://www.instagram.com/forrest.tindall" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
+          <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
         </div>
       </div>
     </nav>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Nav from './Nav'
-import Footer from './Footer'
+import Footer from './Footer.jsx'
 import './Websites.css'
 
 export default function Websites() {
@@ -46,16 +46,6 @@ export default function Websites() {
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Fastburger</p>
             <p className="mono-text"><span className="bold">Description:</span> Burger Restaurant</p>
-            <p className="mono-text"><span className="bold">Work:</span> Design, prototyping and development of the website</p>
-          </section>
-
-
-      <section className='project card'>
-            <div className="featured-image">
-              <img src="/images/creationbase.png" alt="Creationbase" />
-            </div>
-            <p className="mono-text"><span className="bold">Brand:</span> Creationbase</p>
-            <p className="mono-text"><span className="bold">Description:</span> Agency</p>
             <p className="mono-text"><span className="bold">Work:</span> Design, prototyping and development of the website</p>
           </section>
 

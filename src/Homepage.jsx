@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Nav from './Nav'
-import Footer from './Footer'
+import Footer from './Footer.jsx'
+import Testimonials from './Testimonials.jsx'
 import './Homepage.css'
 
 export default function Homepage() {
   const [typed, setTyped] = useState('')
-  const fullText = 'Fullstack Creative'
   const [parallax, setParallax] = useState(0)
+  const [fade, setFade] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [ctaVisible, setCtaVisible] = useState(false)
+  const ctaRef = useRef(null)
 
+  
   useEffect(() => {
+    const fullText = 'Design | Development | UXUI'
     let i = 0
     let active = true
     const type = () => {
@@ -31,12 +37,35 @@ export default function Homepage() {
   }, [])
 
   useEffect(() => {
+    setLoaded(true)
+  }, [])
+
+  useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY || 0
       setParallax(-y * 0.25)
+      const f = Math.max(0, Math.min(y / 400, 1))
+      setFade(f)
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const el = ctaRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setCtaVisible(true)
+          }
+        })
+      },
+      { threshold: 0.2 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
   }, [])
 
   return (
@@ -45,13 +74,11 @@ export default function Homepage() {
       <div className="homepage-container">
 
         
-        <section className="hero">
-         
-            <h1 className="name">Forrest Tindall</h1>
-           <div className="sub">{typed}<span className="caret" /></div>
-            <img src="/images/hero-photo.jpg" alt="Hero" className="hero-img" style={{ transform: `translateY(${parallax}px)` }} />
+        <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
+            <h1 className="name">Design and Development for bold businesses.</h1>
+            <div className="sub">{typed}<span className="caret" /></div>
+            <div className="hero-fade" style={{ opacity: fade }} />
           
-      
         </section>
 
 
@@ -72,7 +99,7 @@ export default function Homepage() {
           </a>
           <a href="/graphicdesign" className="card-link">
             <div className="card">
-              <img src="/images/creationbasemockup.jpg" alt="Branding" className="card-img" />
+              <img src="/images/OPEN NETIZEN.jpg" alt="Branding" className="card-img" />
               <div className="label">Branding</div>
               <p className="desc">Strategy, tone, and a cohesive visual system that tells a consistent story.</p>
             </div>
@@ -83,27 +110,22 @@ export default function Homepage() {
 
 <div>
         <a href="/websites" className="feature card feature-link">
-          <img src="/images/fastburger.png" alt="Web Design and Development" className="feature-img" />
+          <img src="/images/amore mockup.png" alt="Web Design and Development" className="feature-img" />
           <div className="label">Web Design & Development</div>
           <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>
         </a>
-</div>
+      </div>
+
+      <Testimonials />
+
+
+
+ 
 
 
 
 
-<div>
-        <a href="/photography" className="feature card feature-link">
-          <img src="/images/hero.jpg" alt="Commercial Photography" className="feature-img" />
-          <div className="label">Commercial Photography</div>
-          <p className="desc">Product, lifestyle, and editorial images shot in studio and on location. Lighting, composition, and post tuned to showcase brand and drive results.</p>
-        </a>
-</div>
-
-
-
-
-        <section className="cta-section">
+        <section ref={ctaRef} className={`cta-section ${ctaVisible ? 'cta-visible' : ''}`}>
           <p className="cta-text">Have a project in mind?</p>
           <a href="/contact" className="cta-btn">Contact</a>
         </section>

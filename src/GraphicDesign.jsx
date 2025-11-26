@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Nav from './Nav'
-import Footer from './Footer'
+import Footer from './Footer.jsx'
 import './GraphicDesign.css'
 
 export default function GraphicDesign() {

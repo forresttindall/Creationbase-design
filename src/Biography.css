@@ -150,3 +150,53 @@
 .bold {
   font-weight: 700;
 }
+.about-hero {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.about-leadline {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9c9c9c;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+  margin-top: 24px;
+  margin-bottom: 80px;
+}
+
+.about-card.card {
+  margin-top: 0;
+  padding: 16px;
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+}
+
+.about-image { margin-bottom: 12px; }
+.about-image img { width: 100%; height: auto; display: block; border-radius: 8px; }
+
+.about-card-title {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #c7c7c7;
+}
+
+.about-lead { grid-column: 1 / 2; grid-row: 1 / 3; }
+.about-method { grid-column: 2 / 3; }
+.about-founded { grid-column: 2 / 3; }
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-lead { grid-column: auto; grid-row: auto; }
+}

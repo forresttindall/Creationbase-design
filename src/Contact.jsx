@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 import './Contact.css'
 import { blastConfetti } from './confetti'
 import Nav from './Nav'
-import Footer from './Footer'
+import Footer from './Footer.jsx'
 
 export default function Contact() {
   const form = useRef()
@@ -69,7 +69,7 @@ export default function Contact() {
           <div className="contact-content">
             <h1>Contact</h1>
 
-            <p className="mono-text"><span className="bold">Description:</span> Contact Forrest Tindall about projects or work.</p>
+            <p className="mono-text"><span className="bold">Description:</span> Contact the Creaionbase studio about projects or work.</p>
             <p className="mono-text"><span className="bold">Medium:</span> E-mail</p>
             <p className="mono-text"><span className="bold">Date:</span> {currentDateTime}</p>
 
@@ -91,11 +91,11 @@ export default function Contact() {
             </form>
 
             <h1>Follow</h1>
-            <p className="mono-text"><span className="bold">Description:</span> Follow Forrest Tindall on social.</p>
+            <p className="mono-text"><span className="bold">Description:</span> Follow Creaionbase on social.</p>
             <p className="mono-text"><span className="bold">Medium:</span> World Wide Web</p>
-            <p className="mono-text"><span className="bold">Instagram:</span> <a className="project-link" href="https://www.instagram.com/forrest.tindall/" target="_blank">Instagram</a></p>
-            <p className="mono-text"><span className="bold">Threads:</span> <a className="project-link" href="https://www.threads.net/@forrest.tindall" target="_blank">Threads</a></p>
-            <p className="mono-text"><span className="bold">Bluesky:</span> <a className="project-link" href="https://bsky.app/profile/forresttindall.com" target="_blank">Bluesky</a></p>
+            <p className="mono-text"><span className="bold">Instagram:</span> <a className="project-link" href="https://www.instagram.com/creationbase.io/" target="_blank">Instagram</a></p>
+            <p className="mono-text"><span className="bold">Threads:</span> <a className="project-link" href="https://www.threads.net/@creationbase.io" target="_blank">Threads</a></p>
+            <p className="mono-text"><span className="bold">Bluesky:</span> <a className="project-link" href="https://bsky.app/profile/creationbase.io" target="_blank">Bluesky</a></p>
           </div>
         </div>
       </div>
