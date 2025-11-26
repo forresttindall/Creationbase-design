@@ -1,0 +1,42 @@
+.terms-hero {
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.terms-effective {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9c9c9c;
+}
+
+.terms-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 80px;
+}
+
+.terms-card.card {
+  margin-top: 0;
+  padding: 16px;
+  background-color: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+}
+
+.terms-title {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #c7c7c7;
+}
+
+@media (max-width: 768px) {
+  .terms-content { gap: 12px; margin-top: 16px; margin-bottom: 60px; }
+  .terms-effective { font-size: 12px; }
+  .terms-card.card { padding: 12px; }
+}
