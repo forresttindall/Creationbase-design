@@ -8,6 +8,7 @@
 .gd-grid .project {
   break-inside: avoid;
   margin-bottom: 16px;
+  padding: 0;
 }
 
 .gd-grid .featured-image {
