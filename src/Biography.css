@@ -199,7 +199,7 @@
 .about-founded { grid-column: 2 / 3; }
 
 @media (max-width: 768px) {
-  .about-hero { text-align: center; }
+  .about-hero { text-align: left; }
   .about-hero .name {
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-weight: 900;
