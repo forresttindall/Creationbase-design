@@ -18,7 +18,7 @@ export default function Footer() {
             />
             <h3 className="footer-logo">CREATIONBASE</h3>
           </div>
-          <p className="footer-tagline">Design | Development | UXUI</p>
+          <p className="footer-tagline">Design | Development | Strategy</p>
           <p className="footer-copy">© {currentYear} Creationbase. All rights reserved.</p>
         </div>
         <div className="footer-right" role="navigation" aria-label="Footer navigation">
