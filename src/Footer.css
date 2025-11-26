@@ -82,6 +82,8 @@
   font-size: 12px;
   margin: 4px 0;
   transition: color 180ms ease;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .footer-link:hover {
@@ -106,7 +108,7 @@
   .site-footer { overflow-x: hidden; }
   .footer-row { flex-direction: column; gap: 16px; }
   .footer-left { max-width: 100%; }
-  .footer-right { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; max-width: 100%; padding-right: 10px; }
+  .footer-right { grid-template-columns: 1fr; gap: 12px; width: 100%; max-width: 100%; padding-right: 0; }
   .footer-logo-image { height: 20px; }
   .footer-logo { font-size: 16px; }
   .footer-title { margin-bottom: 6px; }
