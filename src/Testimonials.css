@@ -1,6 +1,6 @@
 .testimonials-section {
   background: #000;
-  padding: 80px 20px;
+  padding: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +79,7 @@
 }
 
 .fulllegth { height: 100%; }
-.glow { box-shadow: 0 10px 30px rgba(255,255,255,0.05); }
+.glow { box-shadow: none; }
 
 .userdetails { display: flex; align-items: center; gap: 12px; }
 .imgbox { margin-right: 12px; }
@@ -127,5 +127,10 @@
 }
 
 @media (min-width: 1500px) {
-  .testimonials-section { padding: 100px 20px; }
+  .testimonials-section { padding: 100px 0; }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section { padding-top: 0; padding-bottom: 60px; }
+  .testimonials-title { font-size: 28px; }
 }

@@ -2,6 +2,7 @@
   width: 100%;
   columns: 2 320px;
   column-gap: 16px;
+  margin-bottom: 80px;
 }
 
 .gd-grid .project {
@@ -39,7 +40,8 @@
 }
 
 @media (max-width: 768px) {
-  .gd-grid { columns: 1 100%; }
+  .gd-grid { columns: 1 100%; column-gap: 12px; margin-bottom: 60px; }
+  .gd-grid .project { margin-bottom: 12px; }
 }
 
 .name {

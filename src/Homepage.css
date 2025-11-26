@@ -153,9 +153,9 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 16px;
   margin-top: 24px;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }
 
 .card-link {
@@ -165,7 +165,7 @@
 }
 
 .card {
-  margin-top: 100px;
+  margin-top: 0;
   background-color: #0a0a0a;
   border: 1px solid #1a1a1a;
   border-radius: 8px;
@@ -196,11 +196,11 @@
 
 
 .feature {
-  margin-top: 100px;
+  margin-top: 80px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }
 
 .feature-link {
@@ -308,10 +308,14 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 12px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+  }
+  .feature {
+    margin-top: 0;
+    margin-bottom: 100px;
   }
   .card {
-    margin-top: 16px;
+    margin-top: 0;
   }
 }
 .hero-loaded .name { animation: slideFadeUp 520ms ease forwards; }

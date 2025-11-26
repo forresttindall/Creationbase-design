@@ -153,6 +153,7 @@
 .about-hero {
   margin-top: 20px;
   margin-bottom: 12px;
+  text-align: left;
 }
 
 .about-leadline {
@@ -168,6 +169,7 @@
   gap: 16px;
   align-items: stretch;
   grid-auto-rows: 1fr;
+  grid-auto-flow: row;
   margin-top: 24px;
   margin-bottom: 80px;
 }
@@ -197,6 +199,32 @@
 .about-founded { grid-column: 2 / 3; }
 
 @media (max-width: 768px) {
+  .about-hero { text-align: center; }
+  .about-hero .name {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 0.9;
+    margin: 0;
+    font-size: clamp(32px, 9vw, 70px);
+  }
   .about-grid { grid-template-columns: 1fr; }
+  .about-grid { align-items: start; grid-auto-rows: auto; }
   .about-lead { grid-column: auto; grid-row: auto; }
+  .about-method, .about-founded { grid-column: auto; grid-row: auto; }
+  .about-leadline { font-size: 12px; }
+  .about-grid { gap: 12px; margin-top: 16px; margin-bottom: 60px; }
+  .about-card.card { padding: 12px; }
+  .about-image { margin-bottom: 8px; }
+}
+
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; align-items: start; grid-auto-rows: auto; }
+  .about-lead, .about-method, .about-founded { grid-column: auto; grid-row: auto; }
+}
+
+@media (orientation: portrait) {
+  .about-grid { grid-template-columns: 1fr; align-items: start; grid-auto-rows: auto; }
+  .about-lead, .about-method, .about-founded { grid-column: auto; grid-row: auto; }
 }

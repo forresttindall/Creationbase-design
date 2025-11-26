@@ -1,6 +1,8 @@
 {
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+  ],
   "rewrites": [
-    { "source": "/services", "destination": "/services.html" },
     { "source": "/:path((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }
