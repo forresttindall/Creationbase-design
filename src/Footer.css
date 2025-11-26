@@ -97,10 +97,12 @@
     font-size: 9px;
     padding: 16px 10px 20px 10px;
     white-space: normal;
+    max-width: 100%;
   }
+  .site-footer { overflow-x: hidden; }
   .footer-row { flex-direction: column; gap: 16px; }
   .footer-left { max-width: 100%; }
-  .footer-right { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .footer-right { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; }
   .footer-logo-image { height: 20px; }
   .footer-logo { font-size: 16px; }
   .footer-title { margin-bottom: 6px; }
@@ -108,7 +110,7 @@
 }
 
 @media (max-width: 480px) {
-  .footer-right { grid-template-columns: 1fr; }
+  .footer-right { grid-template-columns: 1fr; gap: 12px; }
 }
 .footer-row {
   display: flex;
@@ -128,4 +130,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(160px, 1fr));
   gap: 24px;
+  min-width: 0;
 }
+
+.footer-column { min-width: 0; }
