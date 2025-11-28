@@ -45,6 +45,7 @@
 
 @media (max-width: 768px) {
   .sites-grid { gap: 12px; margin-bottom: 60px; }
+  .name { font-size: 28px; }
 }
 
 /* No responsive column changes needed; cards are full width */

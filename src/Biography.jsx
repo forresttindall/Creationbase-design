@@ -20,7 +20,7 @@ export default function Biography() {
         <div className="about-grid">
           <section className="about-card card about-lead">
             <div className="about-image">
-              <img src="/images/creationbasemockup.jpg" alt="Creationbase mockup" loading="lazy" />
+              <img src="/images/new creationbase mockup.jpg" alt="Creationbase mockup" loading="lazy" />
             </div>
             <p className="bio-text">At Creationbase, we don't just build websites and apps; we craft powerful digital experiences designed to connect with your target audience and drive measurable results. We understand that for small and medium sized businesses, your online presence is a critical tool for growth, and we're passionate about making it as effective as possible.</p>
           </section>

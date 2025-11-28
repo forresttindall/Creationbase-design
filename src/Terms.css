@@ -3,6 +3,11 @@
   margin-bottom: 12px;
 }
 
+.terms-hero .name {
+  font-size: 32px;
+  font-weight: 700;
+}
+
 .terms-effective {
   margin: 8px 0 0 0;
   font-size: 14px;
@@ -39,4 +44,5 @@
   .terms-content { gap: 12px; margin-top: 16px; margin-bottom: 60px; }
   .terms-effective { font-size: 12px; }
   .terms-card.card { padding: 12px; }
+  .terms-hero .name { font-size: 28px; }
 }

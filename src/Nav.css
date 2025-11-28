@@ -39,7 +39,7 @@
 }
 
 .logo {
-  height: 28px;
+  height: 50px;
   width: auto;
 }
 
@@ -199,6 +199,6 @@
     display: inline-flex;
   }
   .logo {
-    height: 24px;
+    height: 48px;
   }
 }

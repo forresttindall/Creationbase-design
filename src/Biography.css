@@ -156,6 +156,10 @@
   text-align: left;
 }
 
+.about-hero .name {
+  font-size: 32px;
+}
+
 .about-leadline {
   margin: 8px 0 0 0;
   font-size: 14px;
@@ -207,7 +211,7 @@
     letter-spacing: 1.5px;
     line-height: 0.9;
     margin: 0;
-    font-size: clamp(32px, 9vw, 70px);
+    font-size: 28px;
   }
   .about-grid { grid-template-columns: 1fr; }
   .about-grid { align-items: start; grid-auto-rows: auto; }

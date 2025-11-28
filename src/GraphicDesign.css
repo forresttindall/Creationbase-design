@@ -43,6 +43,7 @@
 @media (max-width: 768px) {
   .gd-grid { columns: 1 100%; column-gap: 12px; margin-bottom: 60px; }
   .gd-grid .project { margin-bottom: 12px; }
+  .name { font-size: 28px; }
 }
 
 .name {

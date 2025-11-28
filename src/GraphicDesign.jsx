@@ -18,7 +18,7 @@ export default function GraphicDesign() {
         <div className="gd-grid">
           <section className='project card'>
             <div className="featured-image">
-              <img src="/images/creationbasemockup.jpg" alt="Featured artwork" />
+              <img src="/images/new creationbase mockup.jpg" alt="Featured artwork" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Creationbase (agency)</p>
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>

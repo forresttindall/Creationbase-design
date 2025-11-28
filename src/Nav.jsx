@@ -9,8 +9,8 @@ export default function Nav() {
       <div className="nav-container">
         <div className="nav-left">
           <a href="/" aria-label="Home" className="brand-link">
-            <img src="/images/dot-triangle.png" alt="Creationbase Logo" className="logo" />
-            <span className="brand">CREATIONBASE</span>
+            <img src="/images/typography logo png.png" alt="Creationbase Logo" className="logo" />
+          
           </a>
         </div>
         <div className="nav-right">
