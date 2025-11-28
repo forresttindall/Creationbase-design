@@ -3,7 +3,7 @@ import './Footer.css'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  const logoPath = '/images/dot-triangle.png'
+  const logoPath = '/images/typography logo png.png'
 
   return (
     <footer className="site-footer" role="contentinfo" aria-label="Site footer">
@@ -16,7 +16,7 @@ export default function Footer() {
               className="footer-logo-image"
               loading="lazy"
             />
-            <h3 className="footer-logo">CREATIONBASE</h3>
+     
           </div>
           <p className="footer-tagline">Design | Development | Strategy</p>
           <p className="footer-copy">© {currentYear} Creationbase. All rights reserved.</p>

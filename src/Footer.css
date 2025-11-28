@@ -30,7 +30,7 @@
 }
 
 .footer-logo-image {
-  height: 24px;
+  height: 44px;
   width: auto;
 }
 
@@ -109,7 +109,7 @@
   .footer-row { flex-direction: column; gap: 16px; }
   .footer-left { max-width: 100%; }
   .footer-right { grid-template-columns: 1fr; gap: 12px; width: 100%; max-width: 100%; padding-right: 0; }
-  .footer-logo-image { height: 20px; }
+  .footer-logo-image { height: 40px; }
   .footer-logo { font-size: 16px; }
   .footer-title { margin-bottom: 6px; }
   .footer-link { padding: 6px 0; }
