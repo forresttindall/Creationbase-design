@@ -9,7 +9,7 @@ export default function Nav() {
       <div className="nav-container">
         <div className="nav-left">
           <a href="/" aria-label="Home" className="brand-link">
-            <img src="/images/typography logo png.png" alt="Creationbase Logo" className="logo" />
+            <img src="/images/tri color typography logo2.png" alt="Creationbase Logo" className="logo" />
           
           </a>
         </div>

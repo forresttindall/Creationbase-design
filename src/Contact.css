@@ -48,7 +48,7 @@
   background: #0a0a0a;
   border: 1px solid #1a1a1a;
   border-radius: 8px;
-  caret-color: #ff0000;
+  caret-color: #ffffff;
 }
 
 .contact-input::placeholder {
@@ -57,13 +57,13 @@
 
 .contact-input:focus {
   outline: none;
-  border-color: #ff0000;
-  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.16);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.16);
 }
 
 .contact-input::selection {
-  background: rgba(255, 0, 0, 0.25);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.25);
+  color: #000000;
 }
 
 .submit-button {
@@ -106,7 +106,12 @@
 }
 
 .contact-content .project-link {
-  color: #ff0000;
+  color: #C2FF00;
+  text-shadow: 0 0 4px rgba(194, 255, 0, 0.6), 0 0 8px rgba(194, 255, 0, 0.35);
+}
+.contact-content .project-link:hover {
+  color: #C2FF00;
+  text-shadow: 0 0 6px rgba(194, 255, 0, 0.7), 0 0 12px rgba(194, 255, 0, 0.45);
 }
 
 .contact-content .mono-text {

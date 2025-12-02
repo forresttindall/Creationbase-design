@@ -127,7 +127,7 @@ export default function Homepage() {
 
         <section ref={ctaRef} className={`cta-section ${ctaVisible ? 'cta-visible' : ''}`}>
           <p className="cta-text">Have a project in mind?</p>
-          <a href="/contact" className="cta-btn">Contact</a>
+          <a href="/contact" className="cta-btn">Get Started</a>
         </section>
 
 
