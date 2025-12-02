@@ -75,7 +75,7 @@ export default function Homepage() {
 
         
         <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
-            <h1 className="name">Design and Development for bold businesses.</h1>
+            <h1 className="name">Design and Development for bold brands.</h1>
             <div className="sub">{typed}<span className="caret" /></div>
             <div className="hero-fade" style={{ opacity: fade }} />
           
