@@ -14,7 +14,7 @@ export default function Homepage() {
 
   
   useEffect(() => {
-    const fullText = 'Design | Development | Strategy'
+    const fullText = 'Design & Development Studio'
     let i = 0
     let active = true
     const type = () => {
