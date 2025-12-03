@@ -55,7 +55,7 @@ export default function GraphicDesign() {
 
           <section className='project card'>
             <div className="featured-image">
-              <img src="/images/paradoxlabs.jpg" alt="Featured artwork" />
+              <img src="/images/paradoxlabscard.jpg" alt="Featured artwork" />
             </div>
             <p className="mono-text"><span className="bold">Brand:</span> Paradox Labs (Tech)</p>
             <p className="mono-text"><span className="bold">Work:</span> Brand Identity Creation And Design</p>
