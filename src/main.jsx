@@ -7,6 +7,7 @@ import Privacy from './Privacy'
 import GraphicDesign from './GraphicDesign'
 import Websites from './Websites'
 import Contact from './Contact'
+import CaseStudies from './CaseStudies'
 
 const path = window.location.pathname
 let Root
@@ -22,6 +23,8 @@ if (path === '/about') {
   Root = <Terms />
 } else if (path === '/privacy') {
   Root = <Privacy />
+} else if (path === '/casestudies') {
+  Root = <CaseStudies />
 } else {
   Root = <Homepage />
 }

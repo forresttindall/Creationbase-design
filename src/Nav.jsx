@@ -18,6 +18,7 @@ export default function Nav() {
           
           <a href="/graphicdesign" className="nav-link"><span className="nav-link-text">Graphic Design</span></a>
          
+          <a href="/casestudies" className="nav-link"><span className="nav-link-text">Case Studies</span></a>
           <a href="/about" className="nav-link"><span className="nav-link-text">About</span></a>
           <a href="/contact" className="nav-link"><span className="nav-link-text">Contact</span></a>
           <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
@@ -38,6 +39,7 @@ export default function Nav() {
         <div className="mobile-menu-container">
           <a href="/websites" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Websites</span></a>
           <a href="/graphicdesign" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Graphic Design</span></a>
+          <a href="/casestudies" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Case Studies</span></a>
           <a href="/about" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">About</span></a>
           <a href="/contact" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Contact</span></a>
           <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
