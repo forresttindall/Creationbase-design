@@ -3,7 +3,7 @@
   grid-template-columns: 160px 1fr;
   gap: 16px;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .case-hero-logo {
@@ -19,7 +19,7 @@
 }
 
 .case-section {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .case-section.card,
@@ -31,7 +31,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin: 16px 0;
 }
+
+.case-split .case-section { margin: 0; }
 
 .case-col {}
 
@@ -39,7 +42,7 @@
   font-size: 20px;
   font-weight: 800;
   text-transform: uppercase;
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
 }
 
 .case-text {
@@ -47,12 +50,15 @@
   color: #c7c7c7;
   margin: 6px 0;
 }
+.case-section .case-title + .case-text { margin-top: 0; }
+.case-section .case-text:last-child { margin-bottom: 0; }
+.case-section .case-list:last-child .case-text:last-child { margin-bottom: 0; }
 
 .case-media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 .case-media {
@@ -77,10 +83,16 @@
   border-radius: 8px;
 }
 
+.case-points { margin-top: 16px; }
+
 @media (max-width: 768px) {
   .case-hero { grid-template-columns: 1fr; }
   .case-media-grid { grid-template-columns: 1fr; }
   .case-section.card,
-  .case-hero.card { padding: 12px; }
+  .case-hero.card { padding: 16px; }
   .case-split { grid-template-columns: 1fr; }
+  .case-hero { margin-bottom: 16px; }
+  .case-section { margin-bottom: 16px; }
+  .case-split { margin-bottom: 16px; }
+  .case-media-grid { gap: 16px; margin-top: 16px; }
 }
