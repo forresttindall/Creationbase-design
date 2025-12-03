@@ -85,7 +85,7 @@ export default function Homepage() {
         <section className="grid">
           <a href="/graphicdesign" className="card-link">
             <div className="card">
-              <img src="/images/paradoxlabs.jpg" alt="Logo Design" className="card-img" />
+              <img src="/images/paradoxlabscard.jpg" alt="Logo Design" className="card-img" />
               <div className="label">Logo Design</div>
               <p className="desc">Distinctive marks and identity systems that stand out and scale across mediums.</p>
             </div>
