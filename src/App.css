@@ -106,9 +106,20 @@ body {
   overflow-x: hidden;
 }
 
+.homepage {
+  padding-top: 72px;
+}
+
+@media (max-width: 768px) {
+  .homepage { padding-top: 72px; }
+}
+
+.homepage.homepage-no-offset {
+  padding-top: 0;
+}
+
 .label {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 800;
   text-transform: uppercase;
 }
-

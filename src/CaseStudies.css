@@ -55,21 +55,19 @@
 .case-section .case-list:last-child .case-text:last-child { margin-bottom: 0; }
 
 .case-media-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  columns: 2 340px;
+  column-gap: 16px;
   margin-top: 16px;
 }
 
 .case-media {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  break-inside: avoid;
+  margin-bottom: 16px;
 }
 
 .case-media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -87,7 +85,7 @@
 
 @media (max-width: 768px) {
   .case-hero { grid-template-columns: 1fr; }
-  .case-media-grid { grid-template-columns: 1fr; }
+  .case-media-grid { columns: 1 100%; }
   .case-section.card,
   .case-hero.card { padding: 16px; }
   .case-split { grid-template-columns: 1fr; }

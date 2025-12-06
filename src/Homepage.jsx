@@ -69,44 +69,44 @@ export default function Homepage() {
   }, [])
 
   return (
-    <div className="homepage">
-      <Nav />
+    <div className="homepage homepage-no-offset">
+      <div className="home-pane">
+        <Nav />
+
+          <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
+              <h1 className="name">Design and Development for bold brands.</h1>
+              <div className="sub">{typed}<span className="caret" /></div>
+              <div className="hero-fade" style={{ opacity: fade }} />
+            
+          </section>
+
+
+          <section className="grid">
+            <a href="/graphicdesign" className="card-link">
+              <div className="card">
+                <img src="/images/paradoxlabscard.jpg" alt="Logo Design" className="card-img" />
+                <div className="label">Logo Design</div>
+                <p className="desc">Distinctive marks and identity systems that stand out and scale across mediums.</p>
+              </div>
+            </a>
+            <a href="/graphicdesign" className="card-link">
+              <div className="card">
+                <img src="/images/parallax shirt 3.jpg" alt="Graphic Design" className="card-img" />
+                <div className="label">Graphic Design</div>
+                <p className="desc">Posters, layouts, and digital assets crafted for clarity, impact, and polish.</p>
+              </div>
+            </a>
+            <a href="/graphicdesign" className="card-link">
+              <div className="card">
+                <img src="/images/OPEN NETIZEN.jpg" alt="Branding" className="card-img" />
+                <div className="label">Branding</div>
+                <p className="desc">Strategy, tone, and a cohesive visual system that tells a consistent story.</p>
+              </div>
+            </a>
+          </section>
+      </div>
+
       <div className="homepage-container">
-
-        
-        <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
-            <h1 className="name">Design and Development for bold brands.</h1>
-            <div className="sub">{typed}<span className="caret" /></div>
-            <div className="hero-fade" style={{ opacity: fade }} />
-          
-        </section>
-
-
-        <section className="grid">
-          <a href="/graphicdesign" className="card-link">
-            <div className="card">
-              <img src="/images/paradoxlabscard.jpg" alt="Logo Design" className="card-img" />
-              <div className="label">Logo Design</div>
-              <p className="desc">Distinctive marks and identity systems that stand out and scale across mediums.</p>
-            </div>
-          </a>
-          <a href="/graphicdesign" className="card-link">
-            <div className="card">
-              <img src="/images/parallax shirt 3.jpg" alt="Graphic Design" className="card-img" />
-              <div className="label">Graphic Design</div>
-              <p className="desc">Posters, layouts, and digital assets crafted for clarity, impact, and polish.</p>
-            </div>
-          </a>
-          <a href="/graphicdesign" className="card-link">
-            <div className="card">
-              <img src="/images/OPEN NETIZEN.jpg" alt="Branding" className="card-img" />
-              <div className="label">Branding</div>
-              <p className="desc">Strategy, tone, and a cohesive visual system that tells a consistent story.</p>
-            </div>
-          </a>
-        </section>
-
-
 
 <div>
         <a href="/websites" className="feature card feature-link">
