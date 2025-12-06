@@ -32,7 +32,7 @@ export default function Footer() {
             <a className="footer-link" href="/about">About</a>
             <a className="footer-link" href="/casestudies">Case Studies</a>
             <a className="footer-link" href="#">Careers</a>
-            <a className="footer-link" href="/contact">Contact</a>
+            <a className="footer-link" href="/#contact">Contact</a>
           </div>
           <div className="footer-column">
             <h4 className="footer-title">Legal</h4>

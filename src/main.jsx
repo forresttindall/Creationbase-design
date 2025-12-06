@@ -6,7 +6,6 @@ import Terms from './Terms'
 import Privacy from './Privacy'
 import GraphicDesign from './GraphicDesign'
 import Websites from './Websites'
-import Contact from './Contact'
 import CaseStudies from './CaseStudies'
 
 const path = window.location.pathname.replace(/\/$/, '') || '/'
@@ -17,8 +16,6 @@ if (path === '/biography') {
   Root = <GraphicDesign />
 } else if (path === '/websites') {
   Root = <Websites />
-} else if (path === '/contact') {
-  Root = <Contact />
 } else if (path === '/terms') {
   Root = <Terms />
 } else if (path === '/privacy') {
