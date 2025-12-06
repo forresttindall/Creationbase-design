@@ -6,8 +6,7 @@ import './Homepage.css'
 
 export default function Homepage() {
   const [typed, setTyped] = useState('')
-  const [parallax, setParallax] = useState(0)
-  const [fade, setFade] = useState(0)
+  
   const [loaded, setLoaded] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(false)
   const ctaRef = useRef(null)
@@ -40,16 +39,7 @@ export default function Homepage() {
     setLoaded(true)
   }, [])
 
-  useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY || 0
-      setParallax(-y * 0.25)
-      const f = Math.max(0, Math.min(y / 400, 1))
-      setFade(f)
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  
 
   useEffect(() => {
     const el = ctaRef.current
@@ -76,7 +66,6 @@ export default function Homepage() {
           <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
               <h1 className="name">Design and Development for bold brands.</h1>
               <div className="sub">{typed}<span className="caret" /></div>
-              <div className="hero-fade" style={{ opacity: fade }} />
             
           </section>
 
@@ -91,7 +80,7 @@ export default function Homepage() {
             </a>
             <a href="/graphicdesign" className="card-link">
               <div className="card">
-                <img src="/images/parallax shirt 3.jpg" alt="Graphic Design" className="card-img" />
+                <img src="/images/analog square.png" alt="Graphic Design" className="card-img" />
                 <div className="label">Graphic Design</div>
                 <p className="desc">Posters, layouts, and digital assets crafted for clarity, impact, and polish.</p>
               </div>
