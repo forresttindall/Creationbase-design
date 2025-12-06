@@ -44,7 +44,7 @@ export default function Contact() {
     emailjs.init('pZtlnSO7NHel0tpbW')
 
     emailjs
-      .sendForm('service_qlqfr28', 'template_cc2wh4f', form.current, {
+      .sendForm('service_txe96pq', 'template_l2zhyqf', form.current, {
         publicKey: 'pZtlnSO7NHel0tpbW',
       })
       .then(
@@ -69,18 +69,19 @@ export default function Contact() {
           <div className="contact-content">
             <h1>Contact</h1>
 
-            <p className="mono-text"><span className="bold">Description:</span> Contact the Creaionbase studio about projects or work.</p>
-            <p className="mono-text"><span className="bold">Medium:</span> E-mail</p>
+            <p className="mono-text">Contact the Creaionbase studio about projects or work.</p>
             <p className="mono-text"><span className="bold">Date:</span> {currentDateTime}</p>
 
             <form ref={form} onSubmit={sendEmail} className="contact-form">
-              <input type="text" name="from_name" required placeholder="Your Name" className="contact-input" />
-              <input type="email" name="user_email" required placeholder="Your Email" className="contact-input" />
-              <input type="text" name="subject" required placeholder="Subject" className="contact-input" />
-              <textarea name="message" required placeholder="Your Message" className="contact-input" rows="6"></textarea>
+              <div className="contact-form-row">
+                <input type="text" name="from_name" required placeholder="Name" className="input" />
+                <input type="email" name="user_email" required placeholder="Email" className="input" />
+              </div>
+              <input type="hidden" name="subject" value="Contact Inquiry" />
+              <textarea name="message" required placeholder="Message" className="textarea" rows="4"></textarea>
 
-              <button type="submit" className="submit-button" disabled={status.isSubmitting}>
-                {status.isSubmitting ? <span className="loading-spinner"></span> : 'Send Message'}
+              <button type="submit" className="cta-btn" disabled={status.isSubmitting}>
+                {status.isSubmitting ? 'Sending…' : 'Send'}
               </button>
 
               {status.message && (
@@ -91,8 +92,7 @@ export default function Contact() {
             </form>
 
             <h1>Follow</h1>
-            <p className="mono-text"><span className="bold">Description:</span> Follow Creaionbase on social.</p>
-            <p className="mono-text"><span className="bold">Medium:</span> World Wide Web</p>
+            <p className="mono-text">Follow Creaionbase on social.</p>
             <p className="mono-text"><span className="bold">Instagram:</span> <a className="project-link" href="https://www.instagram.com/creationbase.io/" target="_blank">Instagram</a></p>
             <p className="mono-text"><span className="bold">Threads:</span> <a className="project-link" href="https://www.threads.net/@creationbase.io" target="_blank">Threads</a></p>
             <p className="mono-text"><span className="bold">Bluesky:</span> <a className="project-link" href="https://bsky.app/profile/creationbase.io" target="_blank">Bluesky</a></p>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+import { blastConfetti } from './confetti'
 import Nav from './Nav'
 import Footer from './Footer.jsx'
 import Testimonials from './Testimonials.jsx'
@@ -10,6 +12,8 @@ export default function Homepage() {
   const [loaded, setLoaded] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(false)
   const ctaRef = useRef(null)
+  const formRef = useRef(null)
+  const [formStatus, setFormStatus] = useState({ isSubmitting: false })
 
   
   useEffect(() => {
@@ -57,6 +61,25 @@ export default function Homepage() {
     obs.observe(el)
     return () => obs.disconnect()
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    setFormStatus({ isSubmitting: true })
+    emailjs.init('pZtlnSO7NHel0tpbW')
+    emailjs
+      .sendForm('service_txe96pq', 'template_l2zhyqf', formRef.current, { publicKey: 'pZtlnSO7NHel0tpbW' })
+      .then(
+        () => {
+          setFormStatus({ isSubmitting: false })
+          if (formRef.current) formRef.current.reset()
+          blastConfetti()
+        },
+        () => {
+          setFormStatus({ isSubmitting: false })
+          blastConfetti()
+        }
+      )
+  }
 
   return (
     <div className="homepage homepage-no-offset">
@@ -121,7 +144,15 @@ export default function Homepage() {
         <div className="home-pane-content">
           <section ref={ctaRef} className={`cta-section ${ctaVisible ? 'cta-visible' : ''}`}>
             <p className="cta-text">Have a project in mind?</p>
-            <a href="/contact" className="cta-btn">Get Started</a>
+            <form ref={formRef} onSubmit={sendEmail} className="contact-form">
+              <input type="hidden" name="subject" value="CTA Inquiry" />
+              <div className="contact-form-row">
+                <input type="text" name="from_name" placeholder="Name" className="input" required />
+                <input type="email" name="user_email" placeholder="Email" className="input" required />
+              </div>
+              <textarea name="message" placeholder="Message" className="textarea" required />
+              <button type="submit" className="cta-btn" disabled={formStatus.isSubmitting}>Send</button>
+            </form>
           </section>
         </div>
       </div>

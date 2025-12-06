@@ -22,7 +22,7 @@
 
 .contact-content {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -34,31 +34,41 @@
 }
 
 .contact-form {
+  max-width: 100%;
+  margin: 16px auto 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form-row {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  margin-top: 16px;
-  margin-bottom: 32px;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
-.contact-input {
+.input, .textarea {
   width: 100%;
-  padding: 10px 12px;
-  color: #c7c7c7;
-  background: #0a0a0a;
-  border: 1px solid #1a1a1a;
-  border-radius: 8px;
+  padding: 8px 10px;
+  color: #dedede;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
   caret-color: #ffffff;
-}
-
-.contact-input::placeholder {
+  font-size: 12px;
   font-family: Geist mono, monospace;
 }
 
-.contact-input:focus {
+.input::placeholder, .textarea::placeholder {
+  font-family: Geist mono, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.input:focus, .textarea:focus {
   outline: none;
-  border-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.16);
+  border-color: rgba(194, 255, 0, 0.6);
+  box-shadow: 0 0 0 1px rgba(194, 255, 0, 0.25);
 }
 
 .contact-input::selection {
@@ -66,22 +76,30 @@
   color: #000000;
 }
 
-.submit-button {
-  justify-self: start;
-  padding: 10px 12px;
+.cta-btn {
   font-size: 14px;
+  padding: 8px 16px;
+  margin-top: 8px;
+  align-self: center;
+  display: inline-flex;
+  width: fit-content;
+  white-space: nowrap;
   font-family: Geist mono, monospace;
-  color: #c7c7c7;
-  background: #0a0a0a;
-  border: 1px solid #1a1a1a;
-  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #111;
+  background: rgba(194, 255, 0, 0.70);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 9999px;
   cursor: pointer;
-  transition: background-color 180ms ease, border-color 180ms ease;
+  text-decoration: none;
 }
 
-.submit-button:hover {
-  background-color: #111111;
-  border-color: #333333;
+.cta-btn:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 0 6px rgba(194, 255, 0, 0.35), 0 0 12px rgba(194, 255, 0, 0.2);
 }
 
 .loading-spinner {
@@ -121,3 +139,6 @@
 
 .status-message.success { color: #9fe29f; }
 .status-message.error { color: #ff8080; }
+@media (max-width: 768px) {
+  .contact-form-row { grid-template-columns: 1fr; }
+}
