@@ -32,11 +32,11 @@ export default function Websites() {
             <section className='project card dev-card'>
               <div className="badge">Web Development</div>
               <ul className="dev-list">
-                <li>Modern, scalable sites and apps</li>
+                <li>Modern, scalable websites</li>
                 <li>Clean, accessible UI and semantic HTML</li>
-                <li>Performance budgets and fast loads</li>
+                <li>Performance and fast loading</li>
                 <li>Modular components and maintainable code</li>
-                <li>CI-ready builds and sane tooling</li>
+  
               </ul>
             </section>
           </div>
