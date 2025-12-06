@@ -354,6 +354,16 @@
   margin-right: auto;
 }
 
+.status-message {
+  font-size: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #1a1a1a;
+  text-align: center;
+}
+.status-message.success { color: #9fe29f; }
+.status-message.error { color: #ff8080; }
+
 @media (max-width: 768px) {
   .contact-form { max-width: 100%; margin-top: 20px; }
   .contact-form-row { grid-template-columns: 1fr; }

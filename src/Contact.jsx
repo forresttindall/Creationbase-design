@@ -37,16 +37,18 @@ export default function Contact() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    emailjs.init('ZpTIIyS2dofg5_9Ux')
+  }, [])
+
   const sendEmail = (e) => {
     e.preventDefault()
     setStatus((prev) => ({ ...prev, isSubmitting: true }))
-
-    emailjs.init('pZtlnSO7NHel0tpbW')
-
+    const fd = new FormData(form.current)
+    const data = Object.fromEntries(fd.entries())
+    data.reply_to = data.user_email
     emailjs
-      .sendForm('service_txe96pq', 'template_l2zhyqf', form.current, {
-        publicKey: 'pZtlnSO7NHel0tpbW',
-      })
+      .send('service_txe96pq', 'template_l2zhyqf', data)
       .then(
         () => {
           setStatus({ message: 'Message sent successfully!', isError: false, isSubmitting: false })
@@ -56,7 +58,6 @@ export default function Contact() {
         (error) => {
           console.error('EmailJS Error:', error)
           setStatus({ message: 'Failed to send message. Please try again.', isError: true, isSubmitting: false })
-          blastConfetti()
         }
       )
   }

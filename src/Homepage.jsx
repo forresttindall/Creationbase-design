@@ -13,7 +13,7 @@ export default function Homepage() {
   const [ctaVisible, setCtaVisible] = useState(false)
   const ctaRef = useRef(null)
   const formRef = useRef(null)
-  const [formStatus, setFormStatus] = useState({ isSubmitting: false })
+  const [formStatus, setFormStatus] = useState({ isSubmitting: false, message: '', isError: false })
 
   
   useEffect(() => {
@@ -46,6 +46,10 @@ export default function Homepage() {
   
 
   useEffect(() => {
+    emailjs.init('ZpTIIyS2dofg5_9Ux')
+  }, [])
+
+  useEffect(() => {
     const el = ctaRef.current
     if (!el) return
     const obs = new IntersectionObserver(
@@ -64,19 +68,21 @@ export default function Homepage() {
 
   const sendEmail = (e) => {
     e.preventDefault()
-    setFormStatus({ isSubmitting: true })
-    emailjs.init('pZtlnSO7NHel0tpbW')
+    setFormStatus({ isSubmitting: true, message: '', isError: false })
+    const fd = new FormData(formRef.current)
+    const data = Object.fromEntries(fd.entries())
+    data.reply_to = data.user_email
     emailjs
-      .sendForm('service_txe96pq', 'template_l2zhyqf', formRef.current, { publicKey: 'pZtlnSO7NHel0tpbW' })
+      .send('service_txe96pq', 'template_l2zhyqf', data)
       .then(
         () => {
-          setFormStatus({ isSubmitting: false })
+          setFormStatus({ isSubmitting: false, message: 'Message sent successfully!', isError: false })
           if (formRef.current) formRef.current.reset()
           blastConfetti()
         },
-        () => {
-          setFormStatus({ isSubmitting: false })
-          blastConfetti()
+        (error) => {
+          console.error('EmailJS Error:', error)
+          setFormStatus({ isSubmitting: false, message: 'Failed to send message. Please try again.', isError: true })
         }
       )
   }
@@ -151,7 +157,12 @@ export default function Homepage() {
                 <input type="email" name="user_email" placeholder="Email" className="input" required />
               </div>
               <textarea name="message" placeholder="Message" className="textarea" required />
-              <button type="submit" className="cta-btn" disabled={formStatus.isSubmitting}>Send</button>
+              <button type="submit" className="cta-btn" disabled={formStatus.isSubmitting}>{formStatus.isSubmitting ? 'Sending…' : 'Send'}</button>
+              {formStatus.message && (
+                <div className={`status-message ${formStatus.isError ? 'error' : 'success'}`}>
+                  {formStatus.message}
+                </div>
+              )}
             </form>
           </section>
         </div>
