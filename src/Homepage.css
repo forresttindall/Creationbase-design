@@ -181,6 +181,10 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .home-pane { padding-bottom: 10px; }
+}
+
 .card-link {
   display: block;
   color: inherit;
@@ -331,8 +335,8 @@
   }
   .grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 100px;
+    gap: 10px;
+    margin-bottom: 0;
   }
   .feature {
     margin-top: 0;
