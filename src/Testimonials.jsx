@@ -107,7 +107,14 @@ export default function Testimonials() {
               <div className="div6 eachdiv fulllegth">
                 <div className="userdetails">
                   <div className="imgbox">
-                    <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face" alt="Sarah Mitchell" loading="lazy" />
+                    <img
+                      src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+                      alt="Sarah Mitchell"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 40 40\'><rect width=\'40\' height=\'40\' fill=\'%230a0a0a\'/><circle cx=\'20\' cy=\'20\' r=\'12\' fill=\'%231a1a1a\'/></svg>'
+                      }}
+                    />
                   </div>
                   <div className="detbox">
                     <p className="testimonial-name">Sarah Mitchell</p>
@@ -129,7 +136,14 @@ export default function Testimonials() {
               <div className="div7 eachdiv fulllegth">
                 <div className="userdetails">
                   <div className="imgbox">
-                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face" alt="Marcus Thompson" loading="lazy" />
+                    <img
+                      src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face"
+                      alt="Marcus Thompson"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = 'data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 40 40\'><rect width=\'40\' height=\'40\' fill=\'%230a0a0a\'/><circle cx=\'20\' cy=\'20\' r=\'12\' fill=\'%231a1a1a\'/></svg>'
+                      }}
+                    />
                   </div>
                   <div className="detbox">
                     <p className="testimonial-name">Marcus Thompson</p>
