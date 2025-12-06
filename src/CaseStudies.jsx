@@ -43,18 +43,10 @@ export default function CaseStudies() {
         <section className="case-section card">
           <h2 className="case-title">Final Screens</h2>
           <div className="case-media-grid">
-            <div className="case-media card">
-              <img src="/images/analog2.png" alt="Boise Analog Club Logo" />
-            </div>
-             <div className="case-media card">
-              <img src="/images/analogflyer.png" alt="Club Meetup Flyer" />
-            </div>
-              <div className="case-media card">
-              <img src="/images/bac.png" alt="Boise Analog Club Infographic" />
-            </div>
-            <div className="case-media card">
-              <img src="/images/analogmockup.png" alt="Boise Analog Club Website Mockup" />
-            </div>
+            <img src="/images/analog2.png" alt="Boise Analog Club Logo" />
+            <img src="/images/analogflyer.png" alt="Club Meetup Flyer" />
+            <img src="/images/bac.png" alt="Boise Analog Club Infographic" />
+            <img src="/images/analogmockup.png" alt="Boise Analog Club Website Mockup" />
            
           
           </div>

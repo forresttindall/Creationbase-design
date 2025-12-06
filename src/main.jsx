@@ -9,9 +9,9 @@ import Websites from './Websites'
 import Contact from './Contact'
 import CaseStudies from './CaseStudies'
 
-const path = window.location.pathname
+const path = window.location.pathname.replace(/\/$/, '') || '/'
 let Root
-if (path === '/about') {
+if (path === '/biography') {
   Root = <Biography />
 } else if (path === '/graphicdesign') {
   Root = <GraphicDesign />

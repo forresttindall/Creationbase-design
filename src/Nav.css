@@ -61,6 +61,13 @@
   width: auto;
 }
 
+.logo-inline {
+  display: none;
+  height: 32px;
+  width: auto;
+  margin-right: 6px;
+}
+
 .brand {
   text-transform: uppercase;
   font-weight: 700;
@@ -237,4 +244,24 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     z-index: 90;
   }
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .nav-float { padding: 6px 6px; }
+  .nav-right { gap: 6px; }
+  .nav-link { font-size: 13px; height: 36px; padding: 0 10px; }
+  .logo { height: 32px; }
+  .nav-left { left: 20px; top: 22px; }
+  .logo-inline { display: inline-block; }
+  .nav-left { display: none; }
+}
+
+@media (max-width: 920px) and (min-width: 769px) {
+  .nav-float { padding: 4px 4px; }
+  .nav-right { gap: 4px; }
+  .nav-link { font-size: 12px; height: 34px; padding: 0 8px; }
+  .logo { height: 30px; }
+  .nav-left { left: 18px; top: 22px; }
+  .logo-inline { display: inline-block; }
+  .nav-left { display: none; }
 }

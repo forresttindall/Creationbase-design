@@ -60,15 +60,13 @@
   margin-top: 16px;
 }
 
-.case-media {
+.case-media-grid > img {
   break-inside: avoid;
-  margin-bottom: 16px;
-}
-
-.case-media img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .mockup-placeholder {

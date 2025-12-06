@@ -20,11 +20,12 @@ export default function Nav() {
         </div>
         <div className="nav-float">
           <div className="nav-right">
+            <img src="/images/all white png.png" alt="Creationbase Logo" className="logo-inline" />
             <a href="/" className={`nav-link ${currentPath === '/' ? 'active' : ''}`}><span className="nav-link-text">Home</span></a>
             <a href="/websites" className={`nav-link ${currentPath === '/websites' ? 'active' : ''}`}><span className="nav-link-text">Websites</span></a>
             <a href="/graphicdesign" className={`nav-link ${currentPath === '/graphicdesign' ? 'active' : ''}`}><span className="nav-link-text">Graphic Design</span></a>
             <a href="/casestudies" className={`nav-link ${currentPath === '/casestudies' ? 'active' : ''}`}><span className="nav-link-text">Case Studies</span></a>
-            <a href="/about" className={`nav-link ${currentPath === '/about' ? 'active' : ''}`}><span className="nav-link-text">About</span></a>
+            <a href="/biography" className={`nav-link ${currentPath === '/biography' ? 'active' : ''}`}><span className="nav-link-text">Biography</span></a>
             <a href="/contact" className={`nav-link ${currentPath === '/contact' ? 'active' : ''}`}><span className="nav-link-text">Contact</span></a>
             <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
           </div>
@@ -47,7 +48,7 @@ export default function Nav() {
           <a href="/websites" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Websites</span></a>
           <a href="/graphicdesign" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Graphic Design</span></a>
           <a href="/casestudies" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Case Studies</span></a>
-          <a href="/about" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">About</span></a>
+          <a href="/biography" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Biography</span></a>
           <a href="/contact" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Contact</span></a>
           <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
         </div>
