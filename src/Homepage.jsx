@@ -87,7 +87,7 @@ export default function Homepage() {
         <Nav />
         <div className="home-pane-content">
           <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
-              <h1 className="name">Design and Development for bold brands.</h1>
+              <h1 className="name">Branding and web design built to be seen.</h1>
               <div className="sub">{typed}<span className="caret" /></div>
           </section>
 
@@ -121,6 +121,7 @@ export default function Homepage() {
 
 <div>
         <a href="/websites" className="feature card feature-link">
+          <div className="badge">Websites</div>
           <img src="/images/amore mockup.png" alt="Web Design and Development" className="feature-img" />
           <div className="label">Web Design & Development</div>
           <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>

@@ -15,10 +15,14 @@
   box-sizing: border-box;
   margin: 10px auto 10px auto;
   border-radius: 36px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.40), rgba(240,240,240,0.30));
-  border: 1px solid rgba(255,255,255,0.18);
+  background: linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(235,235,235,0.36) 60%, rgba(200,200,200,0.22) 99%, rgba(200,200,200,0.22) 100%);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 0;
+  overflow: hidden;
   padding: 10px 10px 10px 10px;
 }
+
+.home-pane:first-of-type { border-bottom: 0 !important; }
 
 .home-pane-content {
   max-width: 1200px;
@@ -475,4 +479,17 @@
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
+}
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 11px;
+  font-family: Geist mono, monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #111;
+  background: rgba(194, 255, 0, 0.70);
+  border-radius: 9999px;
+  margin: 8px 12px 8px 12px;
 }

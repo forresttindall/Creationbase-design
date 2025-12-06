@@ -2,29 +2,49 @@ import React, { useEffect } from 'react'
 import Nav from './Nav'
 import Footer from './Footer.jsx'
 import './Websites.css'
+import './Homepage.css'
 
 export default function Websites() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  
+  
 
   return (
-    <div className="homepage">
-      <Nav />
-      <div className="homepage-container">
-        <h1 className="name">Websites</h1>
+    <div className="homepage homepage-no-offset websites-page">
+      <div className="home-pane websites-pane">
+        <Nav />
+        <div className="home-pane-content">
+         <h1 className="name">Websites</h1>
         <p className="sites-desc">Web design and development focused on clean visuals, fast performance, and maintainable code. Responsive layouts, accessible UI, and modern tooling to ship quickly and scale.</p>
 
-        <div className="sites-grid">
+          <div className="sites-grid">
+            <section className='project card'>
+              <div className="featured-image">
+                <img src="/images/amore mockup.png" alt="Amore" />
+              </div>
+              <p className="mono-text"><span className="bold">Brand:</span> Amore</p>
+              <p className="mono-text"><span className="bold">Description:</span> Boise Restaurant</p>
+              <p className="mono-text"><span className="bold">Work:</span> Design, prototyping and development of the website</p>
+            </section>
 
-                 <section className='project card'>
-            <div className="featured-image">
-              <img src="/images/amore mockup.png" alt="Amore" />
-            </div>
-            <p className="mono-text"><span className="bold">Brand:</span> Amore</p>
-            <p className="mono-text"><span className="bold">Description:</span> Boise Restaurant</p>
-            <p className="mono-text"><span className="bold">Work:</span> Design, prototyping and development of the website</p>
-          </section>
+            <section className='project card dev-card'>
+              <div className="badge">Web Development</div>
+              <ul className="dev-list">
+                <li>Modern, scalable sites and apps</li>
+                <li>Clean, accessible UI and semantic HTML</li>
+                <li>Performance budgets and fast loads</li>
+                <li>Modular components and maintainable code</li>
+                <li>CI-ready builds and sane tooling</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div className="homepage-container">
+       
+        <div className="sites-grid">
 
 
                  <section className='project card'>
@@ -50,6 +70,9 @@ export default function Websites() {
           </section>
 
 
+        
+
+
 
           <section className='project card'>
             <div className="featured-image">
@@ -60,7 +83,8 @@ export default function Websites() {
             <p className="mono-text"><span className="bold">Work:</span> Design, prototyping and development of the website</p>
           </section>
 
-    
+
+  
         </div>
       </div>
       <Footer />
