@@ -68,7 +68,7 @@
 }
 
 .nav-link {
-  color: #c7c7c7;
+  color: #000000;
   text-decoration: none;
   font-size: 14px;
   display: inline-flex;
@@ -94,9 +94,8 @@
   line-height: 14px;
 }
 
-.nav-link:hover .nav-link-text {
+.nav-link:hover {
   color: #c7c7c7;
-  text-shadow: none;
 }
 
 .nav-link.active {
@@ -176,6 +175,7 @@
 .mobile-menu .nav-link {
   font-size: 24px;
   text-align: center;
+  color: #c7c7c7;
 }
 
 .mobile-menu .nav-link::after {

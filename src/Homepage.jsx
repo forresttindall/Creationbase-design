@@ -62,13 +62,11 @@ export default function Homepage() {
     <div className="homepage homepage-no-offset">
       <div className="home-pane">
         <Nav />
-
+        <div className="home-pane-content">
           <section className={`hero ${loaded ? 'hero-loaded' : ''}`}>
               <h1 className="name">Design and Development for bold brands.</h1>
               <div className="sub">{typed}<span className="caret" /></div>
-            
           </section>
-
 
           <section className="grid">
             <a href="/graphicdesign" className="card-link">
@@ -93,6 +91,7 @@ export default function Homepage() {
               </div>
             </a>
           </section>
+        </div>
       </div>
 
       <div className="homepage-container">
@@ -114,12 +113,17 @@ export default function Homepage() {
 
 
 
-        <section ref={ctaRef} className={`cta-section ${ctaVisible ? 'cta-visible' : ''}`}>
-          <p className="cta-text">Have a project in mind?</p>
-          <a href="/contact" className="cta-btn">Get Started</a>
-        </section>
+        
 
 
+      </div>
+      <div className="home-pane">
+        <div className="home-pane-content">
+          <section ref={ctaRef} className={`cta-section ${ctaVisible ? 'cta-visible' : ''}`}>
+            <p className="cta-text">Have a project in mind?</p>
+            <a href="/contact" className="cta-btn">Get Started</a>
+          </section>
+        </div>
       </div>
       <Footer />
     </div>
