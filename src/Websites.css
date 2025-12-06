@@ -8,13 +8,17 @@
 
 .sites-grid .project {
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  border-radius: 26px;
+  overflow: hidden;
 }
 
 .sites-grid .featured-image {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .sites-grid .featured-image img {
@@ -22,6 +26,7 @@
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 0;
 }
 
 .mono-text {
