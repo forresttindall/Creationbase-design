@@ -121,7 +121,6 @@ export default function Homepage() {
 
 <div>
         <a href="/websites" className="feature card feature-link">
-          <div className="badge">Websites</div>
           <img src="/images/amore mockup.png" alt="Web Design and Development" className="feature-img" />
           <div className="label">Web Design & Development</div>
           <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>
