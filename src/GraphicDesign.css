@@ -8,7 +8,7 @@
 .gd-grid .project {
   break-inside: avoid;
   margin-bottom: 16px;
-  padding: 0;
+  padding: 10px;
 }
 
 .gd-grid .featured-image {
@@ -21,6 +21,7 @@
 .gd-grid .featured-image video {
   width: 100%;
   height: auto;
+  border-radius: 16px;
   display: block;
 }
 
