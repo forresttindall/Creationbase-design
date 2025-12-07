@@ -46,7 +46,10 @@ export default function CaseStudies() {
             <img src="/images/analog2.png" alt="Boise Analog Club Logo" />
             <img src="/images/analogflyer.png" alt="Club Meetup Flyer" />
             <img src="/images/bac.png" alt="Boise Analog Club Infographic" />
+              <img src="/images/propagranda 3.png" alt="Boise Analog Club Poster" />
             <img src="/images/analogmockup.png" alt="Boise Analog Club Website Mockup" />
+            <img src="/images/analog.png" alt="Boise Analog Club Website Mockup 2" />
+          
            
           
           </div>
