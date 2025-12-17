@@ -53,19 +53,24 @@ export default function CaseStudies() {
            
           
           </div>
-          <div className="case-points">
-            <p className="case-text">Retro logo mark and visual system grounded in film heritage</p>
-            <p className="case-text">Website mockup highlighting events, membership, and community storytelling</p>
-            <p className="case-text">Club meetup flyer asset designed for print and digital circulation</p>
-            <p className="case-text">Infographic asset tailored for social and web content</p>
-            <p className="case-text">Together, these deliverables form a cohesive identity system for Boise Analog Club.</p>
-          </div>
         </section>
 
-        <section className="case-section card">
-          <h2 className="case-title">Role & Tools</h2>
-          <p className="case-text">Creationbase led brand identity redesign, logo creation, web mockups, and community assets (flyer and infographic).</p>
-          <p className="case-text">Work was completed using Figma, Affinity, React, and supporting exploration in Illustrator and Procreate.</p>
+        <section className="case-split">
+          <div className="case-section card">
+            <h2 className="case-title">Deliverables</h2>
+            <div className="case-points" style={{ marginTop: 0 }}>
+              <p className="case-text">Retro logo mark and visual system grounded in film heritage</p>
+              <p className="case-text">Website mockup highlighting events, membership, and community storytelling</p>
+              <p className="case-text">Club meetup flyer asset designed for print and digital circulation</p>
+              <p className="case-text">Infographic asset tailored for social and web content</p>
+              <p className="case-text">Together, these deliverables form a cohesive identity system for Boise Analog Club.</p>
+            </div>
+          </div>
+          <div className="case-section card">
+            <h2 className="case-title">Role & Tools</h2>
+            <p className="case-text">Creationbase led brand identity redesign, logo creation, web mockups, and community assets (flyer and infographic).</p>
+            <p className="case-text">Work was completed using Figma, Affinity, React, and supporting exploration in Illustrator and Procreate.</p>
+          </div>
         </section>
       </div>
       <Footer />
