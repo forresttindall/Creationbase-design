@@ -1,53 +1,65 @@
-import React, { useMemo, useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { InstagramLogo } from '@phosphor-icons/react'
 import './Nav.css'
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [homeContact, setHomeContact] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return window.location.hash === '#contact'
-  })
+  const [currentPath, setCurrentPath] = useState('/')
+  const [hash, setHash] = useState('')
+  const [workOpen, setWorkOpen] = useState(false)
+
   useEffect(() => {
-    const onHashChange = () => {
-      if (typeof window === 'undefined') return
-      setHomeContact(window.location.hash === '#contact')
+    const update = () => {
+      const p = window.location.pathname.replace(/\/$/, '')
+      setCurrentPath(p === '' ? '/' : p)
+      setHash(window.location.hash || '')
     }
-    const onCtaEvent = (e) => {
-      setHomeContact(Boolean(e.detail && e.detail.visible))
-    }
-    window.addEventListener('hashchange', onHashChange)
-    window.addEventListener('creationbase:cta', onCtaEvent)
+    update()
+    window.addEventListener('popstate', update)
+    window.addEventListener('hashchange', update)
     return () => {
-      window.removeEventListener('hashchange', onHashChange)
-      window.removeEventListener('creationbase:cta', onCtaEvent)
+      window.removeEventListener('popstate', update)
+      window.removeEventListener('hashchange', update)
     }
   }, [])
-  const active = useMemo(() => {
-    if (typeof window === 'undefined') return 'home'
-    const p = window.location.pathname.replace(/\/$/, '') || '/'
-    if (p === '/') return homeContact ? 'contact' : 'home'
-    return p
-  }, [homeContact])
   return (
     <nav className="nav">
       <div className="nav-container">
         <div className="nav-left">
           <a href="/" aria-label="Home" className="brand-link">
-            <img src="/images/all white png.png" alt="Creationbase Logo" className="logo" />
+            <img src="/images/geist yellow.png" alt="Creationbase Logo" className="logo" />
           
           </a>
         </div>
         <div className="nav-float">
           <div className="nav-right">
-            <img src="/images/all white png.png" alt="Creationbase Logo" className="logo-inline" />
-            <a href="/" className={`nav-link ${active === 'home' ? 'active' : ''}`}><span className="nav-link-text">Home</span></a>
-            <a href="/websites" className={`nav-link ${active === '/websites' ? 'active' : ''}`}><span className="nav-link-text">Websites</span></a>
-            <a href="/graphicdesign" className={`nav-link ${active === '/graphicdesign' ? 'active' : ''}`}><span className="nav-link-text">Graphic Design</span></a>
-            <a href="/casestudies" className={`nav-link ${active === '/casestudies' ? 'active' : ''}`}><span className="nav-link-text">Case Studies</span></a>
-            <a href="/biography" className={`nav-link ${active === '/biography' ? 'active' : ''}`}><span className="nav-link-text">About</span></a>
-            <a href="/#contact" className={`nav-link ${active === 'contact' ? 'active' : ''}`}><span className="nav-link-text">Contact</span></a>
-            <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
+            <img src="/images/fttypelogo.png" alt="Creationbase Logo" className="logo-inline" />
+            <a href="/" className={`nav-link ${currentPath === '/' && hash !== '#contact' ? 'active' : ''}`}><span className="nav-link-text">Home</span></a>
+            <div
+              className={`dropdown ${workOpen ? 'open' : ''}`}
+              onMouseEnter={() => setWorkOpen(true)}
+              onMouseLeave={() => setWorkOpen(false)}
+            >
+              <button
+                type="button"
+                className={`nav-link dropdown-trigger ${['/websites','/graphicdesign','/photography'].includes(currentPath) ? 'active' : ''}`}
+                onClick={() => setWorkOpen(o => !o)}
+              >
+                <span className="nav-link-text">Work</span>
+                <svg className="caret-icon" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+              <div className="dropdown-menu">
+                <a href="/websites" className={`nav-link ${currentPath === '/websites' ? 'active' : ''}`}><span className="nav-link-text">Websites</span></a>
+                <a href="/graphicdesign" className={`nav-link ${currentPath === '/graphicdesign' ? 'active' : ''}`}><span className="nav-link-text">Graphic Design</span></a>
+              
+              </div>
+            </div>
+            <a href="/casestudies" className={`nav-link ${currentPath === '/casestudies' ? 'active' : ''}`}><span className="nav-link-text">Case Studies</span></a>
+            <a href="/biography" className={`nav-link ${currentPath === '/biography' ? 'active' : ''}`}><span className="nav-link-text">About</span></a>
+            <a href="/#contact" className={`nav-link ${currentPath === '/' && hash === '#contact' ? 'active' : ''}`}><span className="nav-link-text">Contact</span></a>
+            <a href="https://www.instagram.com/forrest.creates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link"><InstagramLogo size={18} /></a>
           </div>
         </div>
         <button
@@ -64,13 +76,13 @@ export default function Nav() {
       </div>
       <div id="mobile-menu" className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-container">
-          <a href="/" className={`nav-link ${active === 'home' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}><span className="nav-link-text">Home</span></a>
-          <a href="/websites" className={`nav-link ${active === '/websites' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}><span className="nav-link-text">Websites</span></a>
-          <a href="/graphicdesign" className={`nav-link ${active === '/graphicdesign' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}><span className="nav-link-text">Graphic Design</span></a>
-          <a href="/casestudies" className={`nav-link ${active === '/casestudies' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}><span className="nav-link-text">Case Studies</span></a>
-          <a href="/biography" className={`nav-link ${active === '/biography' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}><span className="nav-link-text">About</span></a>
-          <a href="/#contact" className={`nav-link ${active === 'contact' ? 'active' : ''}`} onClick={() => setMenuOpen(false)}><span className="nav-link-text">Contact</span></a>
-          <a href="https://www.instagram.com/creationbase.io" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
+          <a href="/" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Home</span></a>
+          <a href="/websites" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Websites</span></a>
+          <a href="/graphicdesign" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Graphic Design</span></a>
+          <a href="/casestudies" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Case Studies</span></a>
+          <a href="/biography" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">About</span></a>
+          <a href="/#contact" className="nav-link" onClick={() => setMenuOpen(false)}><span className="nav-link-text">Contact</span></a>
+          <a href="https://www.instagram.com/forrest.creates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="nav-link" onClick={() => setMenuOpen(false)}><InstagramLogo size={18} /></a>
         </div>
       </div>
     </nav>

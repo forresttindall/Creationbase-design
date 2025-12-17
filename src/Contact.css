@@ -56,19 +56,19 @@
   border-radius: 10px;
   caret-color: #ffffff;
   font-size: 12px;
-  font-family: Geist mono, monospace;
+  font-family: "Geist", sans-serif;
 }
 
 .input::placeholder, .textarea::placeholder {
-  font-family: Geist mono, monospace;
+  font-family: "Geist", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.6px;
 }
 
 .input:focus, .textarea:focus {
   outline: none;
-  border-color: rgba(194, 255, 0, 0.6);
-  box-shadow: 0 0 0 1px rgba(194, 255, 0, 0.25);
+  border-color: rgba(255, 255, 0, 0.6);
+  box-shadow: 0 0 0 1px rgba(255, 255, 0, 0.25);
 }
 
 .contact-input::selection {
@@ -84,12 +84,12 @@
   display: inline-flex;
   width: fit-content;
   white-space: nowrap;
-  font-family: Geist mono, monospace;
+  font-family: "Geist", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #111;
-  background: rgba(194, 255, 0, 0.70);
+  background: rgba(255, 255, 0, 0.70);
   backdrop-filter: blur(6px);
   border: none;
   border-radius: 9999px;
@@ -124,12 +124,12 @@
 }
 
 .contact-content .project-link {
-  color: #C2FF00;
-  text-shadow: 0 0 4px rgba(194, 255, 0, 0.6), 0 0 8px rgba(194, 255, 0, 0.35);
+  color: #FFFF00;
+  text-shadow: 0 0 4px rgba(255, 255, 0, 0.6), 0 0 8px rgba(255, 255, 0, 0.35);
 }
 .contact-content .project-link:hover {
-  color: #C2FF00;
-  text-shadow: 0 0 6px rgba(194, 255, 0, 0.7), 0 0 12px rgba(194, 255, 0, 0.45);
+  color: #FFFF00;
+  text-shadow: 0 0 6px rgba(255, 255, 0, 0.7), 0 0 12px rgba(255, 255, 0, 0.45);
 }
 
 .contact-content .mono-text {

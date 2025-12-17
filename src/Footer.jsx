@@ -3,7 +3,7 @@ import './Footer.css'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
-  const logoPath = '/images/all white png.png'
+  const logoPath = '/images/geist yellow.png'
 
   return (
     <footer className="site-footer" role="contentinfo" aria-label="Site footer">

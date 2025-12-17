@@ -86,12 +86,12 @@
   display: inline-block;
   padding: 6px 10px;
   font-size: 11px;
-  font-family: Geist mono, monospace;
+  font-family: "Geist", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #111;
-  background: rgba(194, 255, 0, 0.70);
+  background: rgba(255, 255, 0, 0.70);
   border-radius: 9999px;
   margin: 8px 12px 0 12px;
 }

@@ -17,7 +17,7 @@ export default function Homepage() {
 
   
   useEffect(() => {
-    const fullText = 'Your Creation Studio'
+    const fullText = 'Your Creation Basecamp'
     let i = 0
     let active = true
     const type = () => {
@@ -55,15 +55,12 @@ export default function Homepage() {
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCtaVisible(true)
-            if (typeof window !== 'undefined') {
-              window.dispatchEvent(new CustomEvent('creationbase:cta', { detail: { visible: true } }))
-            }
-          } else {
-            setCtaVisible(false)
-            if (typeof window !== 'undefined') {
-              window.dispatchEvent(new CustomEvent('creationbase:cta', { detail: { visible: false } }))
+          const visible = entry.isIntersecting
+          setCtaVisible(visible)
+          if (window.location.pathname === '/') {
+            const targetHash = visible ? 'contact' : 'home'
+            if (window.location.hash !== `#${targetHash}`) {
+              window.location.hash = targetHash
             }
           }
         })
