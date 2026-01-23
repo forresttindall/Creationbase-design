@@ -139,13 +139,18 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .testimonials-section {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonials-section {
     padding-top: 0;
     padding-bottom: 60px;
-    width: calc(100% + 20px); /* container padding is 10px mobile */
-    margin-left: -10px;
-    margin-right: -10px;
   }
 
   .testimonials-title {

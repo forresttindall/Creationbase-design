@@ -331,12 +331,15 @@
    RESPONSIVE
    ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .feature {
-    width: calc(100% + 20px); /* container padding is 10px each side on mobile */
+    width: calc(100% + 20px); /* container padding is 10px each side */
     margin-left: -10px;
     margin-right: -10px;
   }
+}
+
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
