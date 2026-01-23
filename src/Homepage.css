@@ -1,6 +1,6 @@
 .homepage {
-  background-color: #000;
-  color: #c7c7c7;
+  background-color: #f2f2f2;
+  color: #1a1a1a;
   min-height: 100vh;
 }
 
@@ -10,24 +10,33 @@
   padding: 20px;
 }
 
+/* =========================
+   PANES
+   ========================= */
+
 .home-pane {
   width: calc(100% - 20px);
   box-sizing: border-box;
-  margin: 10px auto 10px auto;
+  margin: 10px auto;
   border-radius: 36px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.48) 0%, rgba(235,235,235,0.36) 60%, rgba(200,200,200,0.22) 99%, rgba(200,200,200,0.22) 100%);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0.3) 60%,
+    rgba(0,0,0,0.4) 100%
+  );
+  border: 1px solid rgba(0,0,0,0.12);
   overflow: hidden;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 
-/* Remove border entirely on homepage (not websites) to eliminate bottom edge line */
 .homepage:not(.websites-page) .home-pane {
   border: none;
 }
 
-.home-pane:first-of-type { border-bottom: 0 !important; }
+.home-pane:first-of-type {
+  border-bottom: 0 !important;
+}
 
 .home-pane-content {
   max-width: 1200px;
@@ -46,9 +55,9 @@
   width: auto;
 }
 
-
-
-
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
   display: flex;
@@ -56,25 +65,23 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
-  padding-top: 0px;
   min-height: 40vh;
   margin-bottom: 16px;
   width: 100%;
   position: relative;
 }
 
-
-
 .hero .name {
-  font-family: "Geist", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Geist", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(80px, 18vw, 90px);
   letter-spacing: 1.5px;
   font-weight: 900;
   text-transform: uppercase;
   margin-top: 80px;
-  margin-bottom: 0px;
   line-height: 0.9;
   text-align: left;
+  color: #111;
 
   opacity: 0;
   transform: translateY(12px) scale(0.99);
@@ -82,10 +89,9 @@
 
 .sub {
   font-size: 28px;
-  opacity: 0.9;
-  margin-bottom: 0;
-  margin-top: 0px;
+  margin: 0;
   text-align: left;
+  color: #2a2a2a;
 
   opacity: 0;
   transform: translateY(12px) scale(0.99);
@@ -108,6 +114,10 @@
   font-size: 32px;
 }
 
+/* =========================
+   CTA
+   ========================= */
+
 .cta-btn {
   align-self: center;
   padding: 8px 16px;
@@ -117,39 +127,35 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #111;
-  background: rgba(255, 255, 0, 0.70);
+  background: rgba(255, 230, 0, 0.75);
   backdrop-filter: blur(6px);
   border: none;
   border-radius: 9999px;
-  text-decoration: none;
   cursor: pointer;
-  box-shadow: none;
-  transition: color 220ms ease, background-color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
   margin-top: 40px;
   position: relative;
   overflow: hidden;
-  will-change: transform;
+  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
 .cta-btn:hover {
   transform: translateY(-1px) scale(1.03);
-  box-shadow: 0 0 6px rgba(255, 255, 0, 0.35), 0 0 12px rgba(255, 255, 0, 0.2);
-}
-
-.cta-btn:focus {
-  outline: none;
-  box-shadow: 0 0 6px rgba(255, 255, 0, 0.35), 0 0 12px rgba(255, 255, 0, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 6px rgba(255,230,0,0.35),
+    0 0 14px rgba(255,230,0,0.2);
 }
 
 .cta-btn::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: -120%;
-  width: 240%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.10) 50%, transparent 100%);
+  inset: 0;
   transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
 }
 
 .cta-btn:hover::after {
@@ -160,12 +166,16 @@
   to { transform: translateX(100%); }
 }
 
+/* =========================
+   CARET
+   ========================= */
+
 .caret {
   display: inline-block;
   width: 1px;
   height: 20px;
   margin-left: 4px;
-  background-color: #c7c7c7;
+  background-color: #111;
   animation: blink 1s steps(1) infinite;
 }
 
@@ -174,33 +184,15 @@
   51%, 100% { opacity: 0; }
 }
 
-.hero-img {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-  border-radius: 8px;
-  object-fit: cover;
-  will-change: transform;
-}
-
-.hero-fade {
-  position: absolute;
-  inset: 0;
-  background: #000;
-  opacity: 0;
-  pointer-events: none;
-}
+/* =========================
+   GRID / CARDS
+   ========================= */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 10px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .home-pane { padding-bottom: 10px; }
 }
 
 .card-link {
@@ -210,19 +202,16 @@
 }
 
 .card {
-  margin-top: 0;
-  background-color: #0a0a0a;
-  border: 1px solid #1a1a1a;
+  background-color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.12);
   border-radius: 26px;
   padding: 10px;
-  overflow: hidden;
 }
 
 .card-img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  display: block;
   border-radius: 16px;
 }
 
@@ -230,53 +219,47 @@
   padding: 10px 12px;
   font-size: 14px;
   font-weight: 600;
+  color: #111;
 }
 
 .desc {
-  padding: 0 12px 12px 12px;
+  padding: 0 12px 12px;
   font-size: 13px;
-  color: #9c9c9c;
+  color: #5a5a5a;
 }
 
-/* Graphic Design mosaic grid */
-
+/* =========================
+   FEATURES
+   ========================= */
 
 .feature {
-  margin-top: 80px;
+  margin: 80px 0;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 16px;
-  margin-bottom: 80px;
-}
-
-.feature-link {
-  color: inherit;
-  text-decoration: none;
 }
 
 .feature-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
   border-radius: 16px;
 }
 
 .feature-title {
   font-size: 28px;
   font-weight: 700;
+  color: #111;
 }
 
 .feature-desc {
   font-size: 14px;
-  color: #9c9c9c;
+  color: #5a5a5a;
 }
 
-.cta-btn-mobile { display: none; }
+/* =========================
+   CTA SECTION
+   ========================= */
 
 .cta-section {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin: 80px 0;
   text-align: center;
   opacity: 0;
   transform: translateY(20px);
@@ -284,25 +267,28 @@
 }
 
 .cta-text {
-  font-family: "Geist", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Geist", system-ui, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   font-size: clamp(48px, 9vw, 80px);
-  color: #c7c7c7;
-  margin-bottom: 12px;
+  color: #111;
 }
 
-.cta-section .cta-btn {
-  display: inline-block;
+.cta-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* =========================
+   CONTACT FORM
+   ========================= */
 
 .contact-form {
   max-width: 840px;
-  margin: 16px auto 0 auto;
+  margin: 16px auto 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  text-align: left;
 }
 
 .contact-form-row {
@@ -313,149 +299,45 @@
 
 .contact-form .input,
 .contact-form .textarea {
-  background-color: transparent;
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #dedede;
+  background-color: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.18);
+  color: #111;
   border-radius: 10px;
   padding: 8px 10px;
   font-size: 12px;
   font-family: "Geist", sans-serif;
-  outline: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .contact-form .input::placeholder,
 .contact-form .textarea::placeholder {
-  color: #bfbfbf;
+  color: #666;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
 }
 
 .contact-form .input:focus,
 .contact-form .textarea:focus {
-  border-color: rgba(194, 255, 0, 0.6);
-  box-shadow: 0 0 0 1px rgba(194, 255, 0, 0.25);
+  border-color: rgba(194,255,0,0.7);
+  box-shadow: 0 0 0 1px rgba(194,255,0,0.3);
 }
 
 .contact-form .textarea {
   min-height: 72px;
-  resize: vertical;
 }
 
-.contact-form .cta-btn {
-  font-size: 14px;
-  padding: 8px 16px;
-  margin-top: 8px;
-  align-self: center;
-  display: inline-flex;
-  width: fit-content;
-  white-space: nowrap;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* =========================
+   TESTIMONIALS
+   ========================= */
 
-.status-message {
-  font-size: 12px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid #1a1a1a;
-  text-align: center;
-}
-.status-message.success { color: #9fe29f; }
-.status-message.error { color: #ff8080; }
-
-@media (max-width: 768px) {
-  .contact-form { max-width: 100%; margin-top: 20px; }
-  .contact-form-row { grid-template-columns: 1fr; }
-}
-
-.cta-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (orientation: portrait) {
-  .homepage-container {
-    max-width: 1200px;
-    padding: 24px;
-  }
-}
-
-@media (min-height: 1100px) and (max-width: 1500px) {
-  .homepage-container {
-    max-width: 1200px;
-    padding: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .homepage-container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    min-height: auto;
-    margin-bottom: 60px;
-  }
-  .hero-left {
-    align-items: center;
-    text-align: center;
-  }
-  .hero .name {
-    font-size: clamp(32px, 9vw, 70px);
-  }
-  .sub {
-    font-size: 18px;
-  }
-  .hero-left .cta-btn { display: none; }
-  .cta-btn-mobile { display: inline-block; align-self: center; margin-top: 16px; }
-  .hero-right {
-    width: 100%;
-  }
-  .hero-img {
-    max-width: 100%;
-  }
-  .brand-logo {
-    height: 36px;
-  }
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 0;
-  }
-  .feature {
-    margin-top: 0;
-    margin-bottom: 100px;
-  }
-  .card {
-    margin-top: 0;
-  }
-}
-.hero-loaded .name { animation: slideFadeUp 520ms ease forwards; }
-.hero-loaded .sub { animation: slideFadeUp 700ms ease forwards; }
-
-@keyframes slideFadeUp {
-  from { opacity: 0; transform: translateY(12px) scale(0.99); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
 .testimonials {
-  margin-top: 20px;
-  margin-bottom: 160px;
+  margin: 20px 0 160px;
 }
 
 .testimonials-title {
-  font-family: "Geist", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Geist", system-ui, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   font-size: 32px;
-  color: #c7c7c7;
-  margin-bottom: 16px;
+  color: #111;
 }
 
 .testimonials-grid {
@@ -465,8 +347,8 @@
 }
 
 .testimonial {
-  background-color: #0a0a0a;
-  border: 1px solid #1a1a1a;
+  background-color: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.12);
   border-radius: 8px;
   padding: 16px;
 }
@@ -474,27 +356,25 @@
 .quote {
   font-size: 16px;
   line-height: 1.6;
-  color: #c7c7c7;
-  margin: 0 0 10px 0;
+  color: #2a2a2a;
 }
 
 .author {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
-  color: #c7c7c7;
+  color: #111;
 }
 
 .role {
   font-size: 12px;
-  color: #9c9c9c;
+  color: #5a5a5a;
 }
 
-@media (max-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* =========================
+   BADGE
+   ========================= */
+
 .badge {
   display: inline-block;
   padding: 6px 10px;
@@ -504,7 +384,43 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #111;
-  background: rgba(194, 255, 0, 0.70);
+  background: rgba(194,255,0,0.75);
   border-radius: 9999px;
-  margin: 8px 12px 8px 12px;
+  margin: 8px 12px;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+.hero-loaded .name {
+  animation: slideFadeUp 520ms ease forwards;
+}
+
+.hero-loaded .sub {
+  animation: slideFadeUp 700ms ease forwards;
+}
+
+@keyframes slideFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }

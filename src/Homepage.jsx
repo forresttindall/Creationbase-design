@@ -17,7 +17,7 @@ export default function Homepage() {
 
   
   useEffect(() => {
-    const fullText = 'Your Creation Basecamp'
+    const fullText = 'Your Creation Studio'
     let i = 0
     let active = true
     const type = () => {
