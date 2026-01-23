@@ -14,7 +14,8 @@ export default function Homepage() {
   const ctaRef = useRef(null)
   const formRef = useRef(null)
   const [formStatus, setFormStatus] = useState({ isSubmitting: false, message: '', isError: false })
-
+  const websiteImages = ['/images/amore mockup.png', '/images/arrowleaf.png', '/images/new site.png']
+  const [websiteIdx, setWebsiteIdx] = useState(0)
   
   useEffect(() => {
     const fullText = 'Your Creation Studio'
@@ -138,7 +139,7 @@ export default function Homepage() {
 
 <div>
         <a href="/websites" className="feature card feature-link">
-          <img src="/images/amore mockup.png" alt="Web Design and Development" className="feature-img" />
+          <img src={websiteImages[websiteIdx]} alt="Web Design and Development" className="feature-img" />
           <div className="label">Web Design & Development</div>
           <p className="desc">Responsive sites and performant frontends built with modern tooling, accessibility, and clean code.</p>
         </a>

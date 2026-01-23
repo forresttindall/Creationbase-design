@@ -16,13 +16,14 @@
 
 .home-pane {
   width: calc(100% - 20px);
+  max-width: 1200px;
   box-sizing: border-box;
-  margin: 10px auto;
+  margin: 10px auto 10px auto;
   border-radius: 36px;
   background: linear-gradient(
     180deg,
-    rgba(0,0,0,0.2) 0%,
-    rgba(0,0,0,0.3) 60%,
+    rgba(0,0,0,0.04) 0%,
+    
     rgba(0,0,0,0.4) 100%
   );
   border: 1px solid rgba(0,0,0,0.12);
@@ -72,11 +73,10 @@
 }
 
 .hero .name {
-  font-family: "Geist", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-family);
   font-size: clamp(80px, 18vw, 90px);
   letter-spacing: 1.5px;
-  font-weight: 900;
+  font-weight: 500;
   text-transform: uppercase;
   margin-top: 80px;
   line-height: 0.9;
@@ -122,20 +122,19 @@
   align-self: center;
   padding: 8px 16px;
   font-size: 14px;
-  font-family: "Geist", sans-serif;
+  font-family: var(--font-family);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.8px;
   color: #111;
-  background: rgba(255, 230, 0, 0.75);
+  background-color: #5EBD4C;
   backdrop-filter: blur(6px);
   border: none;
   border-radius: 9999px;
   cursor: pointer;
   margin-top: 40px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 220ms ease, box-shadow 220ms ease;
+  transition: transform 20s ease, box-shadow 20s ease;
+  animation: navActiveSnap 20s steps(1, end) infinite;
 }
 
 .cta-btn:hover {
@@ -143,27 +142,6 @@
   box-shadow:
     0 0 6px rgba(255,230,0,0.35),
     0 0 14px rgba(255,230,0,0.2);
-}
-
-.cta-btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  transform: translateX(-100%);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.3),
-    transparent
-  );
-}
-
-.cta-btn:hover::after {
-  animation: btn-shine 750ms ease forwards;
-}
-
-@keyframes btn-shine {
-  to { transform: translateX(100%); }
 }
 
 /* =========================
@@ -234,8 +212,12 @@
 
 .feature {
   margin: 80px 0;
+  width: calc(100% + 40px);   /* expand to compensate .homepage-container padding (20px each side) */
+  margin-left: -20px;
+  margin-right: -20px;
   display: grid;
-  gap: 16px;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
 .feature-img {
@@ -245,7 +227,7 @@
 
 .feature-title {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
   color: #111;
 }
 
@@ -267,8 +249,8 @@
 }
 
 .cta-text {
-  font-family: "Geist", system-ui, sans-serif;
-  font-weight: 900;
+  font-family: var(--font-family);
+  font-weight: 500;
   text-transform: uppercase;
   font-size: clamp(48px, 9vw, 80px);
   color: #111;
@@ -305,7 +287,7 @@
   border-radius: 10px;
   padding: 8px 10px;
   font-size: 12px;
-  font-family: "Geist", sans-serif;
+  font-family: var(--font-family);
 }
 
 .contact-form .input::placeholder,
@@ -324,74 +306,6 @@
   min-height: 72px;
 }
 
-/* =========================
-   TESTIMONIALS
-   ========================= */
-
-.testimonials {
-  margin: 20px 0 160px;
-}
-
-.testimonials-title {
-  font-family: "Geist", system-ui, sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 32px;
-  color: #111;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.testimonial {
-  background-color: rgba(255,255,255,0.75);
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 8px;
-  padding: 16px;
-}
-
-.quote {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #2a2a2a;
-}
-
-.author {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  color: #111;
-}
-
-.role {
-  font-size: 12px;
-  color: #5a5a5a;
-}
-
-/* =========================
-   BADGE
-   ========================= */
-
-.badge {
-  display: inline-block;
-  padding: 6px 10px;
-  font-size: 11px;
-  font-family: "Geist", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  color: #111;
-  background: rgba(194,255,0,0.75);
-  border-radius: 9999px;
-  margin: 8px 12px;
-}
-
-/* =========================
-   ANIMATIONS
-   ========================= */
 
 .hero-loaded .name {
   animation: slideFadeUp 520ms ease forwards;
@@ -417,6 +331,11 @@
    ========================= */
 
 @media (max-width: 768px) {
+  .feature {
+    width: calc(100% + 20px); /* container padding is 10px each side on mobile */
+    margin-left: -10px;
+    margin-right: -10px;
+  }
   .grid {
     grid-template-columns: 1fr;
   }
