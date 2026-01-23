@@ -212,7 +212,7 @@
     grid-template-columns: 1fr;
   }
   .testimonials {
-    width: calc(100% - 20px); /* same as desktop */
+    width: calc(100% - 10px);
     padding: 10px;
   }
 }
