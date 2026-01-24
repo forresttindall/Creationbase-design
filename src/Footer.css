@@ -59,9 +59,7 @@
   font-size: 11px;
   color: #555;
 }
-.footer-column.services { grid-area: services; }
-.footer-column.company { grid-area: company; }
-.footer-column.legal { grid-area: legal; }
+/* Grid area assignments are scoped to mobile to avoid desktop overlap */
 
 .footer-title {
   font-size: 11px;
@@ -123,6 +121,9 @@
     margin: 0;
     gap: 16px;
   }
+  .footer-column.services { grid-area: services; }
+  .footer-column.company { grid-area: company; }
+  .footer-column.legal { grid-area: legal; }
 
   .footer-container {
     padding: 20px 14px;
