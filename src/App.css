@@ -68,15 +68,9 @@ main {
 
 
 /* Anchor glow removed and styles scoped to nav links in Nav.css */
-h1, h2 {
+h1 {
   font-family: var(--font-family);
-  font-weight: 900;
-}
-h1, h2 {
-
-  font-family: var(--font-family);
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
 body {

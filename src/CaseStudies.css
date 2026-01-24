@@ -9,13 +9,13 @@
 .case-hero-logo {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 16px;
   display: block;
 }
 
 .case-summary {
   font-size: 14px;
-  color: #9c9c9c;
+  color: #5a5a5a;
 }
 
 .case-section {
@@ -40,14 +40,15 @@
 
 .case-title {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 500;
+  font-family: var(--font-family);
   text-transform: uppercase;
   margin: 0 0 16px 0;
 }
 
 .case-text {
   font-size: 14px;
-  color: #c7c7c7;
+  color: #5a5a5a;
   margin: 6px 0;
 }
 .case-section .case-title + .case-text { margin-top: 0; }
@@ -67,6 +68,15 @@
   display: block;
   border-radius: 16px;
   margin-bottom: 16px;
+}
+
+/* Consistent page title styling */
+.name {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .mockup-placeholder {

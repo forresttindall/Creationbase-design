@@ -8,11 +8,14 @@
 
 .websites-pane {
   padding-top: 80px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+  border: 0;
 }
 
+/* Remove extra bottom space inside the pane */
 .websites-pane .sites-grid {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .websites-page .homepage-container {
@@ -23,6 +26,7 @@
 .sites-pane-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 10px;
 }
 
@@ -30,8 +34,9 @@
   margin: 0;
   padding: 10px;
   border-radius: 26px;
+    margin-top: 40px;
   overflow: hidden;
-  border: 1px solid #1a1a1a;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
 .sites-grid .featured-image {
@@ -47,24 +52,25 @@
   max-width: 100%;
   height: auto;
   display: block;
-  border-radius: 0;
+  border-radius: 16px;
 }
 
 .mono-text {
-  padding: 0 12px 12px 12px;
-  font-size: 12px;
-  color: #9c9c9c;
+  padding: 0px 10px;
+  font-size: 14px;
+
 }
 
-.sites-desc {
+.s1tes-desc {
   font-size: 14px;
-  color: #9c9c9c;
+  color: #5a5a5a;
   margin-bottom: 24px;
 }
 
 .name {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: var(--font-family);
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -77,8 +83,10 @@
 
 /* No responsive column changes needed; cards are full width */
 .dev-card {
-  background-color: #0a0a0a;
+  background-color: rgba(255,255,255,0.75);
   box-shadow: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 
@@ -86,19 +94,17 @@
   display: inline-block;
   padding: 6px 10px;
   font-size: 11px;
-  font-family: "Geist", sans-serif;
+  font-family: var(--font-family);
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.8px;
   color: #111;
-  background: rgba(255, 255, 0, 0.70);
   border-radius: 9999px;
   margin: 8px 12px 0 12px;
 }
 
 .dev-card .badge {
-  color: #c7c7c7;
-  background: rgba(255, 255, 255, 0.08);
+  color: black;
   border: 1px solid #1a1a1a;
   box-shadow: none;
 }
@@ -110,7 +116,7 @@
 }
 .dev-list li {
   font-size: 12px;
-  color: #9c9c9c;
+  color: #5a5a5a;
   position: relative;
   padding-left: 14px;
   margin: 4px 0;

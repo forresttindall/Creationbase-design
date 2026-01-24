@@ -29,7 +29,7 @@ export default function Websites() {
               <p className="mono-text"><span className="bold">Work:</span> Design, prototyping and development of the website</p>
             </section>
 
-            <section className='project card dev-card'>
+            <section className='card dev-card'>
               <div className="badge">Web Development</div>
               <ul className="dev-list">
                 <li>Modern, scalable websites</li>

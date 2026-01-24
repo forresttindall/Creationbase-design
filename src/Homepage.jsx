@@ -14,7 +14,7 @@ export default function Homepage() {
   const ctaRef = useRef(null)
   const formRef = useRef(null)
   const [formStatus, setFormStatus] = useState({ isSubmitting: false, message: '', isError: false })
-  const websiteImages = ['/images/amore mockup.png', '/images/arrowleaf.png', '/images/new site.png']
+  const websiteImages = ['/images/amore mockup.png', '/images/arrowleaf.png']
   const [websiteIdx, setWebsiteIdx] = useState(0)
   
   useEffect(() => {
@@ -44,7 +44,12 @@ export default function Homepage() {
     setLoaded(true)
   }, [])
 
-  
+  useEffect(() => {
+    const id = setInterval(() => {
+      setWebsiteIdx((i) => (i + 1) % websiteImages.length)
+    }, 3000)
+    return () => clearInterval(id)
+  }, [])
 
   useEffect(() => {
     emailjs.init('ZpTIIyS2dofg5_9Ux')
