@@ -63,12 +63,6 @@ export default function Homepage() {
         entries.forEach((entry) => {
           const visible = entry.isIntersecting
           setCtaVisible(visible)
-          if (window.location.pathname === '/') {
-            const targetHash = visible ? 'contact' : 'home'
-            if (window.location.hash !== `#${targetHash}`) {
-              window.location.hash = targetHash
-            }
-          }
         })
       },
       { threshold: 0.2 }

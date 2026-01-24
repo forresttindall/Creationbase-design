@@ -25,10 +25,11 @@
 
 .footer-left {
   max-width: 480px;
+  display: grid;
 }
 
 .footer-logo-container {
-  display: flex;
+  display: grid;
   align-items: center;
   gap: 12px;
 }
@@ -38,13 +39,14 @@
 }
 
 .footer-logo {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
+    color: #555;
 }
 
 .footer-tagline {
-  font-size: 12px;
-  color: #555;
+  font-size: 16px;
+  color: black;
 }
 
 .footer-right {
@@ -52,6 +54,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+.footer-copy {
+  font-size: 11px;
+  color: #555;
+}
+.footer-column.services { grid-area: services; }
+.footer-column.company { grid-area: company; }
+.footer-column.legal { grid-area: legal; }
 
 .footer-title {
   font-size: 11px;
@@ -80,8 +90,35 @@
     padding: 0px;
   }
 
+  /* Place copyright to the right of the logo on mobile */
+  .footer-logo-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 20px;
+  }
+  .footer-logo-image {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .footer-text-block { display: contents; }
+  .footer-tagline {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 0 -10px 0;
+  }
+  .footer-copy {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
   .footer-right {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "services company"
+      "legal    company";
     padding: 0;
     margin: 0;
     gap: 16px;
@@ -91,4 +128,3 @@
     padding: 20px 14px;
   }
 }
-
