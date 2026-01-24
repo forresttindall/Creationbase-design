@@ -77,11 +77,13 @@
   .footer-row {
     flex-direction: column;
     gap: 20px;
-    padding: 18px;
+    padding: 0px;
   }
 
   .footer-right {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    margin: 0;
     gap: 16px;
   }
 
@@ -89,5 +91,4 @@
     padding: 20px 14px;
   }
 }
-
 
