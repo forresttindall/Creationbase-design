@@ -76,12 +76,7 @@
   color: #000000;
 }
 
-@keyframes navActiveSnap {
-  0%   { background-color: #5EBD4C; } /* green */
-  33%  { background-color: #E83F3F; } /* red */
-  66%  { background-color: #E3D948; } /* yellow */
-  100% { background-color: #5EBD4C; }
-}
+
 
 .cta-btn {
   font-size: 14px;
@@ -96,10 +91,9 @@
   font-weight: 500;
   letter-spacing: 0.8px;
   color: #111;
-   background-color: #5EBD4C;
+   background-color: #EDFE00;
   
   backdrop-filter: blur(6px);
-  animation: navActiveSnap 5s steps(1, end) infinite;
   border: none;
   border-radius: 9999px;
   cursor: pointer;

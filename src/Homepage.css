@@ -128,14 +128,13 @@
   font-weight: 500;
   letter-spacing: 0.8px;
   color: #111;
-  background-color: #5EBD4C;
+  background-color: #EDFE00;
   backdrop-filter: blur(6px);
   border: none;
   border-radius: 9999px;
   cursor: pointer;
   margin-top: 40px;
   transition: transform 20s ease, box-shadow 20s ease;
-  animation: navActiveSnap 20s steps(1, end) infinite;
 }
 
 .cta-btn:hover {
